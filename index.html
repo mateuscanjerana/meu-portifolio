@@ -1,213 +1,714 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mateus Canjerana</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
-    <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-</head>
-<body>
-     <!-- Header -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfólio de Mateus Canjerana: interfaces web, projetos de desenvolvimento e soluções digitais."
+    />
+    <meta name="theme-color" content="#0b0d10" />
+    <link rel="icon" type="image/png" href="assets/img/favicon.png" />
+    <title>Mateus Canjerana | Desenvolvedor Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+    <!-- Biblioteca de ícones Unicons -->
+    <link
+    rel="stylesheet"
+    href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    >
+    
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+  </head>
+  <body class="dark-theme" data-palette="black">
+    <!-- Header -->
     <header class="header" id="header">
-        <nav class="nav container">
-            <a href="index.html" class="nav nav_logo">Mateus Canjerana</a>
-            <div class="nav_menu" id="nav-menu">
-                <ul class="nav_list grid">
-                    <li class="nav_item">
-                        <a href="#home" class="nav_link active-link"> 
-                            <i class="uil uil-estate nav_icon"></i>Início
-                        </a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#about" class="nav_link"> 
-                            <i class="uil uil-user nav_icon"></i>Sobre
-                        </a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#portifolio" class="nav_link"> 
-                            <i class="uil uil-scenery nav_icon"></i>Portifólio
-                        </a>
-                    </li>
-                    <li class="nav_item">
-                        <a href="#contato" class="nav_link"> 
-                            <i class="uil uil-message nav_icon"></i>Contato
-                        </a>
-                    </li>
-                    <i class="uil uil-times nav_close" id="nav_close"></i>
-                    
-                    </div>
-                    <div class="nav_btns">
-                        <i class="uil uil-moon charge-theme uil-sun" id="theme-button"></i>
+      <nav class="nav container" aria-label="Navegação principal">
+        <a href="#home" class="nav_logo"
+          >Mateus Canjerana<span class="logo_dot">.</span></a
+        >
 
-                        <div class="nav_toggle" id="nav-toggle">
-                            <i class="uil uil-apps"></i>
-                        </div>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main class="main">
-         <!-- Inicio -->
-        <section class="home section" id="home">
-            <div class="home_container container grid">
-                <div class="home_content grid">
-                    <div class="home_social">
-                        <a href="https://www.linkedin.com/in/mateus-canjerana-bb62bb226/" class="home_social-icon" target="_blank">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
-                        <a href="https://www.instagram.com/mateus_canjerana" class="home_social-icon" target="_blank">
-                            <i class="uil uil-instagram"></i>
-                        </a>
-                        <a href="https://github.com/MateusCanjerana" class="home_social-icon" target="_blank">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-                    </div>
-                    <div class="home_img">
-                        <svg class="home_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                            <mask id="mask0" mask-type="alpha">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                            </mask>
-                            <g mask="url(#mask0)">
-                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                <image class="home_blob-img" x='29' y="-25" href="assets/img/fotocv.png"/>
-                            </g>
-                        </svg>
-                    </div>
-                    <div class="home_data">
-                        <h1 class="home_title">Mateus Canjerana</h1>
-                        <h3 class="home_subtitle">Desenvolvedor Front-End</h3>
-                        <p class="home_description">Olá, sou um Cientista da Computação apaixonado por Tecnologia e Desenvolvimento Web</p>
-                        <a href="#contato" class="button button-flex">
-                            Fale Comigo <i class="uil uil-message button_icon"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="home_scroll">
-                    <a href="#about" class="home_scroll-button button-flex">
-                        <i class="uil uil-mouse-alt home_scroll-mouse"></i>
-                        <span class="home_scroll-name">Rolar para baixo</span>
-                        <i class="uil uil-arrow-down home_scroll-mouse"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-         <!-- Sobre -->
-        <section class="about section" id="about">
-            <h2 class="section_title">Sobre Mim</h2>
-            <span class="section_subtitle">Minhas informações</span>
-            <div class="about_container container grid">
-                <img src="assets/img/about.png" alt="" class="about_img">
-                <div class="about_data">
-                    <p class="about_description">Estudante de 8º Semestre de Ciência da Computação, com conhecimentos de Desenvolvimento Web usando HTML5, CSS3,  JavaScript e Bootstrap,  também em Banco de Dados usando MySQL e PHP, ademais em Linguagem C, Python, Git e GitHub.
-                    </p>  
-                    <div class="about_buttons">
-                    <a download="" href="assets/pdf/CV-mateus-canjerana.pdf
-                    " class="button buton-flex">
-                Download CV<i class="uil uil-download-alt button_icon"></i>
-                </a>
-                </div>
-            </div>
-        </section>
-        <!-- Portifolio -->
-        <section class="portifolio section" id="portifolio">
-            <h2 class="section_title">Portifólio</h2>
-            <span class="section_subtitle">Meus projetos Web</span>
-            <div class="portifolio_container container grid">
-                    <!-- portifolio-1 -->
-                    <div class="portifolio_content ">
-                        <img src="assets/img/LoginPage.png" alt="" class="portifolio_img">
-                        <div class="portifolio_data">
-                            <h3 class="portifolio_title">Login Page</h3>
-                            <p class="portifolio_description">Site com Sistema de Login usando HTML CSS e JavaScript</p>
-                            <a href="https://mateuscanjerana.github.io/login-page/" target="_blank" class="button button-flex button-small portifolio_button">
-                                Demo
-                                <i class="uil uil-arrow-right button_icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- portifolio-2 -->
-                    <div class="portifolio_content  ">
-                        <img src="assets/img/RelogioAna.png" alt="" class="portifolio_img">
-                        <div class="portifolio_data">
-                            <h3 class="portifolio_title">Relógio Analógico</h3>
-                            <p class="portifolio_description">Relógio Analógico funcional usando HTML CSS e JavaScript</p>
-                            <a href="https://mateuscanjerana.github.io/relogioanalogico-js/" target="_blank" class="button button-flex button-small portifolio_button">
-                                Demo
-                                <i class="uil uil-arrow-right button_icon"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-        </section>
-        <!-- Contato -->
-        <section class="contato section contato_bg" id="contato">
-                <div class="contato_container container grid">
-                    <div class="contato_data">
-                        <h2 class="contato_title">Gostaria de falar comigo?</h2>
-                        <p class="contato_description">Mande uma mensagem e entre em contato comigo</p>
-                        <a href="https://api.whatsapp.com/send/?phone=+5561994270301&text=Olá Mateus&type=phone_number" class="button button-flex button-white" target="_blank">
-                            WhatsApp<i class="uil uil-whatsapp contato_icon button_icon"></i>
-                        </a>
-                        <p class="contato_description contato_p">ou</p>
-                        <a href="mailto:caja.mateus@gmail.com" class="button button-flex button-white">
-                            Gmail<i class="uil uil-envelope-alt contato_icon button_icon"></i>
-                        </a>
-                    </div>
-                    <img src="assets/img/about-me.png" alt="" class="contato_img">
-                </div>
-        </section>
-        <!-- Footer -->
-    </main>
-    <footer>
-        <div class="footer">
-            <div class="footer_bg">
-                <div class="footer_container container grid">
-                    <div>
-                        <h1 class="footer_title">Mateus Canjerana</h1>
-                        <span class="footer_subtitle">Desenvolvedor Front-End</span>
-                    </div>
-                    <ul class="footer_links">
-                        <li>
-                            <a href="#about" class="footer_link">Sobre</a>
-                        </li>
-                        <li>
-                            <a href="#portifolio" class="footer_link">Portifólio</a>
-                        </li>
-                        <li>
-                            <a href="#contato" class="footer_link">Contato</a>
-                        </li>
-                    </ul>
-                    <div class="footer_social">
-                        <a href="https://www.linkedin.com/in/mateus-canjerana-bb62bb226/" class="footer_social" target="_blank">
-                            <i class="uil uil-linkedin-alt"></i>
-                        </a>
-                        <a href="https://www.instagram.com/mateus_canjerana" class="footer_social" target="_blank">
-                            <i class="uil uil-instagram"></i>
-                        </a>
-                        <a href="https://github.com/MateusCanjerana" class="footer_social" target="_blank">
-                            <i class="uil uil-github-alt"></i>
-                        </a>
-                    </div>
-                </div>
-                <p class="footer_copy">&#169;
-                    Mateus Canjerana Todos os direitos reservados
-                </p>
-            </div>
+        <div class="nav_menu" id="nav-menu">
+          <ul class="nav_list grid">
+            <li class="nav_item">
+              <a href="#home" class="nav_link active-link"
+                ><i
+                  class="uil uil-estate nav_icon"
+                  aria-hidden="true"
+                  data-fallback="⌂"
+                ></i
+                >Início</a
+              >
+            </li>
+            <li class="nav_item">
+              <a href="#about" class="nav_link"
+                ><i
+                  class="uil uil-user nav_icon"
+                  aria-hidden="true"
+                  data-fallback="◉"
+                ></i
+                >Sobre</a
+              >
+            </li>
+            <li class="nav_item">
+              <a href="#portifolio" class="nav_link"
+                ><i
+                  class="uil uil-scenery nav_icon"
+                  aria-hidden="true"
+                  data-fallback="▧"
+                ></i
+                >Portfólio</a
+              >
+            </li>
+            <li class="nav_item">
+              <a href="#contato" class="nav_link"
+                ><i
+                  class="uil uil-message nav_icon"
+                  aria-hidden="true"
+                  data-fallback="✉"
+                ></i
+                >Contato</a
+              >
+            </li>
+          </ul>
+          <button
+            class="nav_close icon-button"
+            type="button"
+            id="nav-close"
+            aria-label="Fechar menu"
+          >
+            <i class="uil uil-times" aria-hidden="true" data-fallback="×"></i>
+          </button>
         </div>
-    </footer>
-    <a href="#home" class="scroll_up" id="scroll-up">
-        <i class="uil uil-arrow-up scrollup_icon"></i>
-    </a>
 
-    <script src="assets/js/script.js"></script>
-    <script src="assets/js/modal.js"></script>
-</body>
+        <div class="nav_btns">
+          <!-- Preferências independentes: paleta e modo claro/escuro -->
+          <div class="theme_picker">
+            <button
+              id="palette-button"
+              class="icon-button theme-trigger"
+              type="button"
+              aria-label="Escolher paleta de cores"
+              aria-controls="palette-menu"
+              aria-haspopup="true"
+              aria-expanded="false"
+              title="Cores do site"
+            >
+              <i
+                class="uil uil-palette"
+                aria-hidden="true"
+                data-fallback="◒"
+              ></i>
+            </button>
+            <div
+              id="palette-menu"
+              class="palette_menu"
+              hidden
+              role="group"
+              aria-label="Paletas disponíveis"
+            >
+              <span class="palette_title">Cor de destaque</span>
+              <div class="palette_options">
+                <button
+                  type="button"
+                  class="palette_swatch"
+                  data-color="black"
+                  aria-label="Tema preto"
+                  aria-pressed="true"
+                  title="Preto"
+                ></button>
+                <button
+                  type="button"
+                  class="palette_swatch"
+                  data-color="blue"
+                  aria-label="Tema azul"
+                  aria-pressed="false"
+                  title="Azul"
+                ></button>
+                <button
+                  type="button"
+                  class="palette_swatch"
+                  data-color="red"
+                  aria-label="Tema avermelhado"
+                  aria-pressed="false"
+                  title="Avermelhado"
+                ></button>
+                <button
+                  type="button"
+                  class="palette_swatch"
+                  data-color="green"
+                  aria-label="Tema verde"
+                  aria-pressed="false"
+                  title="Verde"
+                ></button>
+              </div>
+            </div>
+          </div>
+          <button
+            class="icon-button charge-theme"
+            type="button"
+            id="theme-button"
+            aria-label="Ativar modo claro"
+            title="Alternar claro e escuro"
+          >
+            <i
+              class="uil uil-sun"
+              id="theme-icon"
+              aria-hidden="true"
+              data-fallback="☼"
+            ></i>
+          </button>
+          <button
+            class="nav_toggle icon-button"
+            type="button"
+            id="nav-toggle"
+            aria-label="Abrir menu"
+            aria-controls="nav-menu"
+            aria-expanded="false"
+          >
+            <i class="uil uil-apps" aria-hidden="true" data-fallback="☰"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <main class="main">
+      <!-- Início -->
+      <section class="home section" id="home" aria-labelledby="home-title">
+        <div class="home_container container grid">
+          <div class="home_content grid">
+            <div class="home_social" aria-label="Redes sociais">
+              <a
+                href="https://www.linkedin.com/in/mateus-canjerana-bb62bb226/"
+                class="home_social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+                ><i
+                  class="uil uil-linkedin-alt"
+                  aria-hidden="true"
+                  data-fallback="in"
+                ></i
+              ></a>
+              <a
+                href="https://www.instagram.com/mateus_canjerana"
+                class="home_social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                ><i
+                  class="uil uil-instagram"
+                  aria-hidden="true"
+                  data-fallback="◎"
+                ></i
+              ></a>
+              <a
+                href="https://github.com/MateusCanjerana"
+                class="home_social-icon"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                ><i
+                  class="uil uil-github-alt"
+                  aria-hidden="true"
+                  data-fallback="GH"
+                ></i
+              ></a>
+            </div>
+
+            <!-- Marca autoral em transparência, integrada ao fundo sem card/moldura -->
+            <div class="home_img">
+              <div class="hero_identity">
+                <img
+                  class="hero_monogram"
+                  src="assets/img/mc-transparent.png"
+                  alt="Monograma MC de Mateus Canjerana"
+                  width="716"
+                  height="474"
+                  fetchpriority="high"
+                />
+                <div class="hero_identity_meta" aria-hidden="true">
+                  <span class="hero_identity_line"></span>
+                  <span
+                    >Identidade MC
+                    <span class="hero_identity_separator">/</span> 2026</span
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="home_data">
+              <p class="home_eyebrow">
+                <span class="eyebrow_line"></span> PORTFÓLIO PESSOAL
+              </p>
+              <h1 class="home_title" id="home-title">
+                Mateus <span>Canjerana</span>
+              </h1>
+              <h2 class="home_subtitle">Desenvolvedor Web</h2>
+              <p class="home_description">
+                Olá, sou formado em Ciência da Computação e gosto de transformar
+                ideias em experiências web funcionais, acessíveis e bem
+                construídas.
+              </p>
+              <a href="#contato" class="button button-flex"
+                >Fale comigo
+                <i
+                  class="uil uil-message button_icon"
+                  aria-hidden="true"
+                  data-fallback="✉"
+                ></i
+              ></a>
+            </div>
+          </div>
+          <div class="home_scroll">
+            <a href="#about" class="home_scroll-button button-flex"
+              ><i
+                class="uil uil-mouse-alt home_scroll-mouse"
+                aria-hidden="true"
+                data-fallback="⇣"
+              ></i
+              ><span class="home_scroll-name">Rolar para baixo</span
+              ><i
+                class="uil uil-arrow-down home_scroll-arrow"
+                aria-hidden="true"
+                data-fallback="↓"
+              ></i
+            ></a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Sobre -->
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <h2 class="section_title" id="about-title">Sobre mim</h2>
+        <span class="section_subtitle">Minha trajetória e o que me move</span>
+        <div class="about_container container grid">
+          <div
+            class="about_visual"
+            role="img"
+            aria-label="Painel de código representando os interesses de desenvolvimento de Mateus"
+          >
+            <div class="editor_titlebar">
+              <span></span><span></span><span></span
+              ><strong>sobre-mim.js</strong>
+            </div>
+            <div class="editor_body" aria-hidden="true">
+              <p>
+                <span class="code_line">01</span
+                ><span class="syntax-purple">const</span> dev =
+                <span class="syntax-yellow">{</span>
+              </p>
+              <p>
+                <span class="code_line">02</span> &nbsp;nome:
+                <span class="syntax-green">'Mateus'</span>,
+              </p>
+              <p>
+                <span class="code_line">03</span> &nbsp;foco:
+                <span class="syntax-green">'Front-End'</span>,
+              </p>
+              <p>
+                <span class="code_line">04</span> &nbsp;stack: [<span
+                  class="syntax-green"
+                  >'HTML'</span
+                >,
+              </p>
+              <p>
+                <span class="code_line">05</span> &nbsp;&nbsp;<span
+                  class="syntax-green"
+                  >'CSS'</span
+                >, <span class="syntax-green">'JS'</span>],
+              </p>
+              <p>
+                <span class="code_line">06</span> &nbsp;objetivo:
+                <span class="syntax-green">'Criar'</span>
+              </p>
+              <p>
+                <span class="code_line">07</span
+                ><span class="syntax-yellow">}</span>;
+              </p>
+            </div>
+            <div class="editor_status">
+              <i
+                class="uil uil-code-branch"
+                aria-hidden="true"
+                data-fallback="⑂"
+              ></i>
+              sempre aprendendo <span>UTF-8</span>
+            </div>
+          </div>
+          <div class="about_data">
+            <p class="about_description">
+              Minha formação em Ciência da Computação me deu contato com
+              diferentes áreas da tecnologia. Hoje, estou aprofundando meus
+              conhecimentos em desenvolvimento web, especialmente HTML, CSS e
+              JavaScript, e construindo projetos que aplicam esses fundamentos.
+            </p>
+            <p class="about_description">
+              Também tenho experiência com PHP, MySQL, Git e GitHub. Meu
+              objetivo é desenvolver interfaces claras e soluções que resolvam
+              problemas reais.
+            </p>
+            <div class="about_techs" aria-label="Tecnologias">
+              <span>HTML5</span><span>CSS3</span><span>JavaScript</span
+              ><span>PHP</span><span>MySQL</span>
+            </div>
+            <div class="about_buttons">
+              <a
+                href="assets/pdf/CV-mateus-canjerana.pdf"
+                class="button button-flex"
+                download
+                >Download CV
+                <i
+                  class="uil uil-download-alt button_icon"
+                  aria-hidden="true"
+                  data-fallback="↓"
+                ></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Portfólio: o carrossel do outro projeto foi integrado apenas nesta seção -->
+      <section
+        class="portifolio section"
+        id="portifolio"
+        aria-labelledby="portifolio-title"
+      >
+        <h2 class="section_title" id="portifolio-title">Portfólio</h2>
+        <span class="section_subtitle"
+          >Projetos web e experiências práticas</span
+        >
+
+        <div
+          class="portifolio_container container slide-container"
+          aria-roledescription="carrossel"
+          aria-label="Projetos em destaque"
+        >
+          <button
+            class="slide-nav slide-nav--prev"
+            type="button"
+            aria-label="Projeto anterior"
+          >
+            <i
+              class="uil uil-angle-left-b"
+              aria-hidden="true"
+              data-fallback="‹"
+            ></i>
+          </button>
+          <div class="slide-content">
+            <div class="card-wrapper">
+              <article
+                class="card portifolio_content"
+                data-details="Página de login construída para praticar interface, formulários e interações com JavaScript. É um projeto demonstrativo de front-end, não um serviço de autenticação de produção."
+              >
+                <div class="image-content">
+                  <img
+                    src="assets/img/login-preview.svg"
+                    alt="Prévia ilustrativa de uma interface de login"
+                    class="portifolio_img card-img"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="portifolio_data card-content">
+                  <span class="project_category">INTERFACE WEB</span>
+                  <h3 class="portifolio_title name">Login Page</h3>
+                  <p class="portifolio_description description">
+                    Interface de login com HTML, CSS e JavaScript.
+                  </p>
+                  <div class="card-actions">
+                    <button type="button" class="button button--details">
+                      Ver mais</button
+                    ><a
+                      href="https://mateuscanjerana.github.io/login-page/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="button button--visit"
+                      >Ver demo
+                      <i
+                        class="uil uil-external-link-alt"
+                        aria-hidden="true"
+                        data-fallback="↗"
+                      ></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="card portifolio_content"
+                data-details="Relógio analógico funcional criado com HTML, CSS e JavaScript. O projeto explora posicionamento visual e atualização do horário na interface."
+              >
+                <div class="image-content">
+                  <img
+                    src="assets/img/clock-preview.svg"
+                    alt="Prévia ilustrativa de um relógio analógico"
+                    class="portifolio_img card-img"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="portifolio_data card-content">
+                  <span class="project_category">JAVASCRIPT</span>
+                  <h3 class="portifolio_title name">Relógio Analógico</h3>
+                  <p class="portifolio_description description">
+                    Relógio funcional com ponteiros animados.
+                  </p>
+                  <div class="card-actions">
+                    <button type="button" class="button button--details">
+                      Ver mais</button
+                    ><a
+                      href="https://mateuscanjerana.github.io/relogioanalogico-js/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="button button--visit"
+                      >Ver demo
+                      <i
+                        class="uil uil-external-link-alt"
+                        aria-hidden="true"
+                        data-fallback="↗"
+                      ></i
+                    ></a>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="card portifolio_content"
+                data-details="Projeto de controle de estoque com operações de cadastro e gerenciamento de produtos, desenvolvido com PHP, MySQL e Bootstrap. Incluído como experiência técnica, sem afirmar que existe uma demo pública."
+              >
+                <div class="image-content">
+                  <img
+                    src="assets/img/mystorage-preview.svg"
+                    alt="Prévia gráfica conceitual de um painel de estoque"
+                    class="portifolio_img card-img"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="portifolio_data card-content">
+                  <span class="project_category">PHP · MYSQL</span>
+                  <h3 class="portifolio_title name">MyStorage</h3>
+                  <p class="portifolio_description description">
+                    Sistema CRUD para controle de produtos e estoque.
+                  </p>
+                  <div class="card-actions">
+                    <button type="button" class="button button--details">
+                      Ver mais</button
+                    ><span class="project_no_demo">Sem demo pública</span>
+                  </div>
+                </div>
+              </article>
+
+              <article
+                class="card portifolio_content"
+                data-details="Projeto em desenvolvimento: ferramenta web planejada para organizar e mesclar PDFs, incluir capas e, em etapas futuras, permitir edição e conversão de documentos. Este card não representa funcionalidades já publicadas."
+              >
+                <div class="image-content">
+                  <img
+                    src="assets/img/docfusion-preview.svg"
+                    alt="Prévia conceitual do projeto DocFusion"
+                    class="portifolio_img card-img"
+                    loading="lazy"
+                  />
+                </div>
+                <div class="portifolio_data card-content">
+                  <span class="project_category">EM DESENVOLVIMENTO</span>
+                  <h3 class="portifolio_title name">DocFusion</h3>
+                  <p class="portifolio_description description">
+                    Projeto para organizar e mesclar documentos PDF.
+                  </p>
+                  <div class="card-actions">
+                    <button type="button" class="button button--details">
+                      Ver mais</button
+                    ><span class="project_no_demo">Em construção</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+          <button
+            class="slide-nav slide-nav--next"
+            type="button"
+            aria-label="Próximo projeto"
+          >
+            <i
+              class="uil uil-angle-right-b"
+              aria-hidden="true"
+              data-fallback="›"
+            ></i>
+          </button>
+          <div
+            class="slide-pagination"
+            aria-label="Navegação pelos projetos"
+          ></div>
+          <p
+            class="sr-only slide-status"
+            aria-live="polite"
+            aria-atomic="true"
+          ></p>
+        </div>
+      </section>
+
+      <!-- Contato -->
+      <section
+        class="contato section"
+        id="contato"
+        aria-labelledby="contato-title"
+      >
+        <div class="contato_container container grid">
+          <div class="contato_data">
+            <p class="contato_kicker">VAMOS CONVERSAR?</p>
+            <h2 class="contato_title" id="contato-title">
+              Tem um projeto em mente?
+            </h2>
+            <p class="contato_description">
+              Fale comigo para trocar ideias sobre desenvolvimento web e
+              soluções digitais.
+            </p>
+            <div class="contato_actions">
+              <a
+                href="https://api.whatsapp.com/send/?phone=5561993988890&amp;text=Ol%C3%A1%20Mateus"
+                class="button button-flex button-white"
+                target="_blank"
+                rel="noopener noreferrer"
+                >WhatsApp
+                <i
+                  class="uil uil-whatsapp contato_icon button_icon"
+                  aria-hidden="true"
+                  data-fallback="✆"
+                ></i
+              ></a>
+              <a
+                href="mailto:caja.mateus@gmail.com"
+                class="button button-flex button-outline"
+                >E-mail
+                <i
+                  class="uil uil-envelope-alt contato_icon button_icon"
+                  aria-hidden="true"
+                  data-fallback="✉"
+                ></i
+              ></a>
+            </div>
+          </div>
+          <!-- Contraponto tipográfico: sem repetir o monograma -->
+          <div class="contato_signature">
+            <span class="contato_signature_kicker"
+              ><span class="contato_signature_dot" aria-hidden="true"></span
+              >DESENVOLVIMENTO WEB</span
+            >
+            <p>Interfaces com<br /><strong>intenção.</strong></p>
+            <span class="contato_signature_rule" aria-hidden="true"></span>
+            <small>Do conceito à experiência digital.</small>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer_bg">
+        <div class="footer_container container grid">
+          <div>
+            <h2 class="footer_title">
+              Mateus Canjerana<span class="logo_dot">.</span>
+            </h2>
+            <span class="footer_subtitle">Desenvolvedor Web</span>
+          </div>
+          <ul class="footer_links">
+            <li><a href="#about" class="footer_link">Sobre</a></li>
+            <li><a href="#portifolio" class="footer_link">Portfólio</a></li>
+            <li><a href="#contato" class="footer_link">Contato</a></li>
+          </ul>
+          <div class="footer_socials">
+            <a
+              href="https://www.linkedin.com/in/mateus-canjerana-bb62bb226/"
+              aria-label="LinkedIn"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i
+                class="uil uil-linkedin-alt"
+                aria-hidden="true"
+                data-fallback="in"
+              ></i></a
+            ><a
+              href="https://www.instagram.com/mateus_canjerana"
+              aria-label="Instagram"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i
+                class="uil uil-instagram"
+                aria-hidden="true"
+                data-fallback="◎"
+              ></i></a
+            ><a
+              href="https://github.com/MateusCanjerana"
+              aria-label="GitHub"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i
+                class="uil uil-github-alt"
+                aria-hidden="true"
+                data-fallback="GH"
+              ></i
+            ></a>
+          </div>
+        </div>
+        <p class="footer_copy">
+          © <span id="footer-year">2026</span> Mateus Canjerana. Todos os
+          direitos reservados.
+        </p>
+      </div>
+    </footer>
+    <a
+      href="#home"
+      class="scroll_up"
+      id="scroll-up"
+      aria-label="Voltar ao início"
+      ><i
+        class="uil uil-arrow-up scrollup_icon"
+        aria-hidden="true"
+        data-fallback="↑"
+      ></i
+    ></a>
+
+    <!-- Modal nativo: acessibilidade e fechamento por ESC sem biblioteca -->
+    <dialog
+      class="project_modal"
+      id="project-modal"
+      aria-labelledby="modal-title"
+      aria-describedby="modal-description"
+    >
+      <button
+        class="modal_close"
+        type="button"
+        aria-label="Fechar detalhes do projeto"
+      >
+        <i class="uil uil-times" aria-hidden="true" data-fallback="×"></i>
+      </button>
+      <div class="modal_layout">
+        <div class="modal_figure">
+          <img id="modal-image" src="assets/img/login-preview.svg" alt="" />
+        </div>
+        <div class="modal_info">
+          <p class="modal_eyebrow">DETALHES DO PROJETO</p>
+          <h2 id="modal-title">Projeto</h2>
+          <p id="modal-description"></p>
+          <a id="modal-link" class="button button-flex" href="#home"
+            >Visitar projeto
+            <i
+              class="uil uil-arrow-up-right button_icon"
+              aria-hidden="true"
+              data-fallback="↗"
+            ></i
+          ></a>
+        </div>
+      </div>
+    </dialog>
+  </body>
+  <script src="assets/js/script.js" defer></script>
+  <script src="assets/js/carousel.js" defer></script>
 </html>

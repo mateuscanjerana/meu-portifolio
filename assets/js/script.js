@@ -1,80 +1,95 @@
-/* Menu */
-const navMenu = document.getElementById('nav-menu'),
-     navToggle = document.getElementById('nav-toggle'),
-     navClose = document.getElementById('nav-close');
+'use strict';
 
-if(navToggle){
-    navToggle.addEventListener('click', ()=>{
-        navMenu.classList.add('show-menu');
+// Menu, seções, scroll e preferências. Nenhuma dependência externa.
+(() => {
+  const navMenu = document.getElementById('nav-menu');
+  const navToggle = document.getElementById('nav-toggle');
+  const navClose = document.getElementById('nav-close');
+  const navLinks = [...document.querySelectorAll('.nav_link')];
+  const header = document.getElementById('header');
+  const scrollUp = document.getElementById('scroll-up');
+  const sections = [...document.querySelectorAll('main section[id]')];
+
+  function setMenu(open) {
+    navMenu.classList.toggle('show-menu', open);
+    navToggle.setAttribute('aria-expanded', String(open));
+  }
+  navToggle?.addEventListener('click', () => setMenu(true));
+  navClose?.addEventListener('click', () => setMenu(false));
+  navLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape') setMenu(false);
+  });
+
+  function onScroll() {
+    const y = window.scrollY;
+    header.classList.toggle('scroll-header', y >= 80);
+    scrollUp.classList.toggle('show-scroll', y >= 560);
+    const active = [...sections].reverse().find(section => y + 140 >= section.offsetTop);
+    if (!active) return;
+    navLinks.forEach(link => {
+      const isActive = link.getAttribute('href') === `#${active.id}`;
+      link.classList.toggle('active-link', isActive);
+      if (isActive) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
     });
-}
-if(navMenu){
-    navMenu.addEventListener('click', ()=>{
-        navMenu.classList.remove('show-menu');
-    });
-}
-const navLink = document.querySelectorAll('.nav_link');
-function linkAction(){
-    const navMenu = document.getElementById('nav-menu');
-    navMenu.classList.remove('show-menu');
-}
-navLink.forEach(n=> n.addEventListener('click', linkAction));
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 
-/* Scroll */
-const sections = document.querySelectorAll('section[id]')
+  const themeButton = document.getElementById('theme-button');
+  const themeIcon = document.getElementById('theme-icon');
+  const paletteButton = document.getElementById('palette-button');
+  const paletteMenu = document.getElementById('palette-menu');
+  const swatches = [...document.querySelectorAll('.palette_swatch')];
+  const acceptedPalettes = new Set(['black','blue','red','green']);
 
-function scrollActive(){
-    const scrollY = window.pageYOffset
+  function safeRead(key) {
+    try { return localStorage.getItem(key); } catch { return null; }
+  }
+  function safeSave(key, value) {
+    try { localStorage.setItem(key, value); } catch { /* Preferência apenas nesta visita. */ }
+  }
+  function setDarkMode(isDark) {
+    document.body.classList.toggle('dark-theme', isDark);
+    themeIcon.className = `uil ${isDark ? 'uil-sun' : 'uil-moon'}`;
+    themeIcon.dataset.fallback = isDark ? '☼' : '☾';
+    themeButton.setAttribute('aria-label', isDark ? 'Ativar modo claro' : 'Ativar modo escuro');
+    themeButton.title = isDark ? 'Ativar modo claro' : 'Ativar modo escuro';
+    safeSave('selected-theme', isDark ? 'dark' : 'light');
+  }
+  function setPalette(color) {
+    if (!acceptedPalettes.has(color)) return;
+    document.body.dataset.palette = color;
+    swatches.forEach(swatch => swatch.setAttribute('aria-pressed', String(swatch.dataset.color === color)));
+    safeSave('selected-palette', color);
+  }
+  function showPalette(open) {
+    paletteMenu.hidden = !open;
+    paletteButton.setAttribute('aria-expanded', String(open));
+  }
 
-    sections.forEach(current =>{
-        const sectionHeight = current.offsetHeight
-        const sectionTop = current.offsetTop - 50;
-        sectionId = current.getAttribute('id')
+  // Adota a preferência antiga do seu script quando já existir.
+  const rememberedTheme = safeRead('selected-theme');
+  setDarkMode(rememberedTheme !== 'light');
+  setPalette(safeRead('selected-palette') || 'black');
+  themeButton.addEventListener('click', () => setDarkMode(!document.body.classList.contains('dark-theme')));
+  paletteButton.addEventListener('click', event => {
+    event.stopPropagation();
+    showPalette(paletteMenu.hidden);
+  });
+  swatches.forEach(swatch => swatch.addEventListener('click', () => {
+    setPalette(swatch.dataset.color);
+    showPalette(false);
+    paletteButton.focus();
+  }));
+  document.addEventListener('click', event => {
+    if (!paletteMenu.hidden && !event.target.closest('.theme_picker')) showPalette(false);
+  });
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && !paletteMenu.hidden) { showPalette(false); paletteButton.focus(); }
+  });
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
-            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add('active-link')
-        }else{
-            document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove('active-link')
-        }
-    })
-}
-window.addEventListener('scroll', scrollActive)
-
-/*charge*/
-function scrollHeader(){
-    const nav = document.getElementById('header')
-    if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
-}
-window.addEventListener('scroll', scrollHeader)
-
-/* scroll */
-function scrollUp(){
-    const scrollUp = document.getElementById('scroll-up');
-    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
-}
-window.addEventListener('scroll', scrollUp)
-
-/* Dark Mode*/ 
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'uil-sun'
-
-// selected topic (se usuario selecionar)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
-
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'uil-moon' : 'uil-sun'
-
-if (selectedTheme) {
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'uil-moon' ? 'add' : 'remove'](iconTheme)
-}
-
-// Ativar / desativar 
-themeButton.addEventListener('click', () => {
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
+  const year = document.getElementById('footer-year');
+  if (year) year.textContent = new Date().getFullYear();
+})();

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Prévia conceitual do gerenciador de PDF">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#241a20"/><stop offset="1" stop-color="#39252b"/></linearGradient><linearGradient id="g" x2="1" y2="1"><stop stop-color="#d78b79" stop-opacity=".95"/><stop offset="1" stop-color="#d78b79" stop-opacity=".22"/></linearGradient></defs>
+<rect width="800" height="450" fill="url(#bg)"/><circle cx="675" cy="38" r="230" fill="#d78b79" opacity=".06"/>
+
+<rect x="88" y="62" width="625" height="323" rx="17" fill="#281e29" stroke="#665264"/>
+<text x="119" y="111" fill="#f1dfe7" font-size="25" font-family="Arial" font-weight="bold">DocFusion</text><text x="594" y="106" fill="#c5a7af" font-size="13" font-family="Arial">CONCEITO</text>
+<rect x="128" y="151" width="152" height="194" rx="9" fill="#f5efed"/><path d="M240 151v41h40" fill="#eed7d3"/><rect x="149" y="215" width="102" height="7" rx="3" fill="#c5b4b5"/><rect x="149" y="235" width="90" height="7" rx="3" fill="#c5b4b5"/><rect x="149" y="255" width="110" height="7" rx="3" fill="#c5b4b5"/>
+<text x="204" y="194" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold" fill="#ba695b">PDF</text>
+<path d="M305 245h104 M389 227l21 18-21 18" fill="none" stroke="#e79c8d" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
+<rect x="442" y="137" width="110" height="158" rx="8" fill="#e7dddd"/><rect x="460" y="172" width="74" height="8" rx="4" fill="#baaaaa"/><rect x="460" y="193" width="65" height="8" rx="4" fill="#baaaaa"/>
+<rect x="558" y="160" width="112" height="158" rx="8" fill="#f5efed"/><text x="614" y="205" text-anchor="middle" fill="#b96759" font-family="Arial" font-weight="bold" font-size="20">PDF</text><rect x="579" y="235" width="70" height="6" rx="3" fill="#b5a8aa"/><rect x="579" y="252" width="70" height="6" rx="3" fill="#b5a8aa"/>
+</svg>

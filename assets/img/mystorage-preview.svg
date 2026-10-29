@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Painel ilustrativo de controle de estoque">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#102323"/><stop offset="1" stop-color="#183b3d"/></linearGradient><linearGradient id="g" x2="1" y2="1"><stop stop-color="#44baa5" stop-opacity=".95"/><stop offset="1" stop-color="#44baa5" stop-opacity=".22"/></linearGradient></defs>
+<rect width="800" height="450" fill="url(#bg)"/><circle cx="675" cy="38" r="230" fill="#44baa5" opacity=".06"/>
+
+<rect x="73" y="57" width="654" height="337" rx="15" fill="#12292a" stroke="#3c7275"/>
+<rect x="73" y="57" width="654" height="53" rx="15" fill="#1b3d3d"/><rect x="73" y="94" width="654" height="16" fill="#1b3d3d"/>
+<text x="110" y="91" fill="#ddfaf5" font-family="Arial,sans-serif" font-size="22" font-weight="bold">MyStorage</text>
+<rect x="106" y="144" width="178" height="88" rx="12" fill="#214b4a"/><text x="126" y="172" fill="#b7dcd6" font-size="16" font-family="Arial">Produtos</text><text x="126" y="215" fill="#f2ffff" font-size="35" font-weight="bold" font-family="Arial">128</text>
+<rect x="305" y="144" width="178" height="88" rx="12" fill="#214b4a"/><text x="325" y="172" fill="#b7dcd6" font-size="16" font-family="Arial">Entradas</text><text x="325" y="215" fill="#f2ffff" font-size="35" font-weight="bold" font-family="Arial">+42</text>
+<rect x="505" y="144" width="178" height="88" rx="12" fill="#214b4a"/><text x="525" y="172" fill="#b7dcd6" font-size="16" font-family="Arial">Saídas</text><text x="525" y="215" fill="#f2ffff" font-size="35" font-weight="bold" font-family="Arial">-19</text>
+<rect x="106" y="250" width="577" height="100" rx="12" fill="#1b3739"/><path d="M125 281H664 M125 313H664" stroke="#305659" stroke-width="2"/>
+<rect x="130" y="270" width="125" height="9" rx="4" fill="#93aead"/><rect x="130" y="295" width="165" height="8" rx="4" fill="#5c8988"/><rect x="130" y="330" width="145" height="8" rx="4" fill="#5c8988"/>
+<rect x="581" y="292" width="72" height="18" rx="9" fill="#409e8f"/><rect x="581" y="324" width="72" height="18" rx="9" fill="#409e8f"/>
+</svg>

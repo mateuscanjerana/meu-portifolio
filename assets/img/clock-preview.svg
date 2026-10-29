@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Relógio analógico ilustrativo">
+<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0d1737"/><stop offset="1" stop-color="#111c47"/></linearGradient><linearGradient id="g" x2="1" y2="1"><stop stop-color="#83a4ff" stop-opacity=".95"/><stop offset="1" stop-color="#83a4ff" stop-opacity=".22"/></linearGradient></defs>
+<rect width="800" height="450" fill="url(#bg)"/><circle cx="675" cy="38" r="230" fill="#83a4ff" opacity=".06"/>
+
+<circle cx="400" cy="225" r="162" fill="#070d1d" stroke="#2d426f" stroke-width="9"/><circle cx="400" cy="225" r="142" fill="#101b38" stroke="#41578d" stroke-opacity=".5" stroke-width="2"/>
+<g stroke="#b3c8fc" stroke-width="6" stroke-linecap="round">
+<path d="M400 94v17 M400 339v17 M269 225h17 M514 225h17 M335 111l8 14 M457 324l8 14 M514 159l-14 8 M300 282l-14 8"/>
+</g><path d="M400 225L402 139" stroke="#f1f5ff" stroke-width="9" stroke-linecap="round"/><path d="M400 225L465 264" stroke="#f1f5ff" stroke-width="7" stroke-linecap="round"/><path d="M400 225L348 319" stroke="#f1a7b6" stroke-width="3" stroke-linecap="round"/><circle cx="400" cy="225" r="11" fill="#fff"/><text x="400" y="289" text-anchor="middle" fill="#86a1da" font-size="14" font-family="Arial,sans-serif">JS / CSS</text>
+</svg>
