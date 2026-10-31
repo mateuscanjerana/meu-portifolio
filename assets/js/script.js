@@ -8,11 +8,14 @@
   const navLinks = [...document.querySelectorAll('.nav_link')];
   const header = document.getElementById('header');
   const scrollUp = document.getElementById('scroll-up');
+  const footer = document.querySelector('.footer');
   const sections = [...document.querySelectorAll('main section[id]')];
 
   function setMenu(open) {
     navMenu.classList.toggle('show-menu', open);
+    document.body.classList.toggle('menu-open', open);
     navToggle.setAttribute('aria-expanded', String(open));
+    if (open) showPalette(false);
   }
   navToggle?.addEventListener('click', () => setMenu(true));
   navClose?.addEventListener('click', () => setMenu(false));
@@ -24,7 +27,9 @@
   function onScroll() {
     const y = window.scrollY;
     header.classList.toggle('scroll-header', y >= 80);
-    scrollUp.classList.toggle('show-scroll', y >= 560);
+    // Esconde o botão assim que o footer começa a entrar no viewport.
+    const footerVisible = footer && footer.getBoundingClientRect().top <= window.innerHeight - 24;
+    scrollUp.classList.toggle('show-scroll', y >= 560 && !footerVisible);
     const active = [...sections].reverse().find(section => y + 140 >= section.offsetTop);
     if (!active) return;
     navLinks.forEach(link => {
@@ -35,6 +40,7 @@
     });
   }
   window.addEventListener('scroll', onScroll, { passive: true });
+  window.addEventListener('resize', onScroll);
   onScroll();
 
   const themeButton = document.getElementById('theme-button');
@@ -53,7 +59,6 @@
   function setDarkMode(isDark) {
     document.body.classList.toggle('dark-theme', isDark);
     themeIcon.className = `uil ${isDark ? 'uil-sun' : 'uil-moon'}`;
-    themeIcon.dataset.fallback = isDark ? '☼' : '☾';
     themeButton.setAttribute('aria-label', isDark ? 'Ativar modo claro' : 'Ativar modo escuro');
     themeButton.title = isDark ? 'Ativar modo claro' : 'Ativar modo escuro';
     safeSave('selected-theme', isDark ? 'dark' : 'light');

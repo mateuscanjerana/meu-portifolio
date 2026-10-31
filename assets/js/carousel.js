@@ -1,5 +1,4 @@
 'use strict';
-
 // Carrossel independente do restante do site: HTML, CSS e JS puros.
 (() => {
   const slider = document.querySelector('.portifolio .slide-container');
@@ -19,14 +18,12 @@
   const modalClose = modal.querySelector('.modal_close');
   const totalCards = originalCards.length;
   if (!totalCards) return;
-
   let visibleCount = 3;
   let currentIndex = 0; // Inclui os clones no início do track.
   let moving = false;
   let finishFallback = null;
   let lastFocus = null;
   let suppressClick = false;
-
   function cardsPerView() {
     if (window.matchMedia('(max-width: 640px)').matches) return 1;
     if (window.matchMedia('(max-width: 980px)').matches) return 2;
@@ -107,7 +104,6 @@
   });
   prevButton.addEventListener('click', () => navigate(-1));
   nextButton.addEventListener('click', () => navigate(1));
-
   for (let i = 0; i < totalCards; i++) {
     const dot = document.createElement('button');
     dot.type = 'button';
@@ -120,7 +116,6 @@
     });
     pagination.appendChild(dot);
   }
-
   // Toque e arraste pelo mouse/caneta. A rolagem vertical permanece livre.
   const gesture = { active:false, pointerId:null, startX:0, startY:0, baseX:0, dx:0, dragging:false };
   function currentTranslateX() {
@@ -186,7 +181,6 @@
     event.preventDefault();
     event.stopImmediatePropagation();
   }, true);
-
   // Modal: delegação de evento inclui as cópias do loop infinito.
   track.addEventListener('click', event => {
     const button = event.target.closest('.button--details');
