@@ -1118,7 +1118,7 @@ body:not(.dark-theme) .footer_bg {
     --header-height: 3.4rem;
   }
   body {
-    padding-bottom: calc(var(--header-height) + 1rem);
+    padding-bottom: 0;
   }
   html {
         scroll-padding-top: 0;
@@ -1126,6 +1126,8 @@ body:not(.dark-theme) .footer_bg {
   .header {
     top: auto;
     bottom: 0;
+    padding-bottom: 10px;
+    padding-top: 10px;
     border-top: 1px solid var(--border-color);
     border-bottom: 0;
   }
@@ -1155,7 +1157,7 @@ body:not(.dark-theme) .footer_bg {
     bottom: 0;
     left: 0;
     width: 100%;
-    padding: 2.1rem 1.5rem 4rem;
+    padding: 2.1rem 1.5rem calc(4rem + 12px);
     border: 1px solid var(--border-color);
     border-radius: 18px 18px 0 0;
     background: var(--container-color);
@@ -1191,7 +1193,7 @@ body:not(.dark-theme) .footer_bg {
   .nav_close {
     display: grid;
     position: absolute;
-    bottom: 1rem;
+    bottom: calc(1rem + 12px);
     right: 1.1rem;
   }
   .nav_toggle {
@@ -1291,6 +1293,7 @@ body:not(.dark-theme) .footer_bg {
   }
   .footer_bg {
     padding-top: 2.2rem;
+    padding-bottom: calc(1.5rem + 3.6rem + 1rem + 12px);
   }
   .footer_container {
     grid-template-columns: 1fr;
