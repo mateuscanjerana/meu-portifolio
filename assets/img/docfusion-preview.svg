@@ -1,11 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
   <title id="title">DocFusion — organização e mesclagem de PDFs</title>
-  <desc id="desc">Ilustração vetorial conceitual do DocFusion, com janela de aplicativo escura, duas páginas PDF entrando em um fluxo de mesclagem e um documento final pronto para exportação.</desc>
+  <desc id="desc">Ilustração vetorial conceitual do DocFusion com faixa coral contendo o nome do projeto, janela de aplicativo escura, duas páginas PDF entrando em um fluxo de mesclagem e um documento final pronto para exportação.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10182c"/><stop offset="1" stop-color="#19244a"/></linearGradient>
     <linearGradient id="window" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#171f3a"/><stop offset="1" stop-color="#121c36"/></linearGradient>
     <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f4f0f1"/><stop offset="1" stop-color="#d9e1f1"/></linearGradient>
     <linearGradient id="paperMerged" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fcf5f5"/><stop offset="1" stop-color="#e4e4f4"/></linearGradient>
+    <linearGradient id="coralBanner" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#ff757c"/><stop offset="1" stop-color="#e85062"/></linearGradient>
     <linearGradient id="button" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#eea7a1"/><stop offset="1" stop-color="#cb656f"/></linearGradient>
     <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5"/></filter>
   </defs>
@@ -26,6 +27,13 @@
   <circle cx="618" cy="64" r="3.6" fill="#ed999d"/>
   <path d="M625 64h16" stroke="#c2a1b9" stroke-width="2" stroke-linecap="round"/>
 
+  <!-- Faixa vermelha de identidade do DocFusion -->
+  <rect x="137" y="95" width="526" height="35" rx="9" fill="url(#coralBanner)"/>
+  <rect x="137.7" y="95.7" width="524.6" height="33.6" rx="8.4" fill="none" stroke="#ffc2c6" stroke-opacity=".38" stroke-width="1.4"/>
+  <text x="157" y="119" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" letter-spacing="-.5">DocFusion</text>
+
+  <!-- Interface redimensionada para acomodar a faixa, preservando os elementos vetoriais -->
+  <g transform="matrix(1 0 0 0.90 0 37)">
   <!-- Barra lateral de ações -->
   <rect x="138" y="102" width="67" height="286" rx="13" fill="#1d2949" stroke="#3b507b" stroke-opacity=".85"/>
   <rect x="151" y="116" width="41" height="42" rx="10" fill="#5a394d" stroke="#e58d99" stroke-opacity=".8"/>
@@ -102,4 +110,5 @@
   <path d="M438 335v6h6" stroke="#ffc3c5" stroke-width="1.7" fill="none"/>
   <rect x="560" y="329" width="64" height="32" rx="8" fill="url(#button)"/>
   <path d="M592 335v13m-6-6 6 6 6-6m-16 8v4h20v-4" fill="none" stroke="#4e2639" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 </svg>

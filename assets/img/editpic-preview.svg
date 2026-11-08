@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="800" height="450" role="img" aria-labelledby="title desc">
   <title id="title">EditPic — editor de imagens</title>
-  <desc id="desc">Ilustração conceitual de um editor de imagens, com janela de aplicativo, imagem original, enquadramento para formato horizontal, ferramentas e exportação.</desc>
+  <desc id="desc">Ilustração conceitual do EditPic com faixa turquesa contendo o nome do projeto, janela de aplicativo, imagem original, enquadramento horizontal, ferramentas e exportação.</desc>
   <defs>
     <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
       <stop stop-color="#10182c"/>
@@ -17,6 +17,10 @@
     <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
       <stop stop-color="#345b85"/>
       <stop offset="1" stop-color="#73bdbc"/>
+    </linearGradient>
+    <linearGradient id="tealBanner" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#42d5c4"/>
+      <stop offset="1" stop-color="#1ba7a0"/>
     </linearGradient>
     <linearGradient id="action" x1="0" y1="0" x2="0" y2="1">
       <stop stop-color="#50e1cd"/>
@@ -42,6 +46,13 @@
   <circle cx="618" cy="64" r="3.6" fill="#50d5c3"/>
   <path d="M625 64h16" stroke="#7c9cac" stroke-width="2" stroke-linecap="round"/>
 
+  <!-- Barra de identidade: no mesmo padrao dos outros cards -->
+  <rect x="137" y="95" width="526" height="35" rx="9" fill="url(#tealBanner)"/>
+  <rect x="137.7" y="95.7" width="524.6" height="33.6" rx="8.4" fill="none" stroke="#a4fff1" stroke-opacity=".34" stroke-width="1.4"/>
+  <text x="157" y="119" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" letter-spacing="-.5">EditPic</text>
+
+  <!-- Interface original preservada, levemente compactada para acomodar a barra -->
+  <g transform="matrix(1 0 0 .90 0 37)">
   <!-- Barra lateral com ferramentas, apenas símbolos vetoriais -->
   <rect x="138" y="102" width="67" height="286" rx="13" fill="#1d2949" stroke="#3b507b" stroke-opacity=".85"/>
   <rect x="151" y="116" width="41" height="42" rx="10" fill="#315b65" stroke="#55d7c6" stroke-opacity=".7"/>
@@ -102,4 +113,5 @@
   <!-- Ícone de exportação, como o botão de ação do projeto -->
   <rect x="560" y="329" width="64" height="32" rx="8" fill="url(#action)"/>
   <path d="M592 335v13m-6-6 6 6 6-6m-16 8v4h20v-4" fill="none" stroke="#113e47" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
 </svg>
