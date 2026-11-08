@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">PlannerQuest — prévia conceitual do aplicativo de organização</title>
+<desc id="desc">Ilustração vetorial de um planner com lista de missões diárias, calendário e barra de experiência XP, em uma janela azul-marinho e detalhes violeta e turquesa.</desc>
+<defs>
+ <radialGradient id="bg" cx="54%" cy="45%" r="77%"><stop offset="0" stop-color="#1a2547"/><stop offset="0.62" stop-color="#111b38"/><stop offset="1" stop-color="#0a132a"/></radialGradient>
+ <linearGradient id="window" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#14203d"/><stop offset="1" stop-color="#0c1530"/></linearGradient>
+ <linearGradient id="chrome" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#2b395b"/><stop offset="1" stop-color="#223152"/></linearGradient>
+ <linearGradient id="purple" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#8d68ec"/><stop offset="1" stop-color="#b393ff"/></linearGradient>
+ <linearGradient id="tile" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#26385b"/><stop offset="1" stop-color="#1a294a"/></linearGradient>
+ <linearGradient id="mint" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#58dcc9"/><stop offset="1" stop-color="#88eed7"/></linearGradient>
+ <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#ffc965"/><stop offset="1" stop-color="#ffdda0"/></linearGradient>
+ <clipPath id="windowClip"><rect x="258" y="87" width="1084" height="717" rx="48"/></clipPath>
+</defs>
+<rect x="0" y="0" width="1600" height="900" rx="0" fill="url(#bg)"/>
+<circle cx="1438" cy="105" r="525" fill="#7580c6" opacity="0.085"/>
+<circle cx="108" cy="995" r="480" fill="#7983c6" opacity="0.09"/>
+<circle cx="320" cy="160" r="290" fill="#4bd3d0" opacity="0.019"/>
+<rect x="267" y="114" width="1084" height="715" rx="47" fill="#050b1b" opacity="0.35"/>
+<rect x="258" y="87" width="1084" height="717" rx="48" fill="url(#window)" stroke="#546b98" stroke-width="3"/>
+<path d="M258 135 Q258 87 306 87 H1294 Q1342 87 1342 135 V164 H258 Z" fill="url(#chrome)" />
+<line x1="258" y1="163" x2="1342" y2="163" stroke="#60749f" stroke-width="2" stroke-linecap="round" opacity="0.7"/>
+<circle cx="313" cy="126" r="11" fill="#ff7b86"/>
+<circle cx="354" cy="126" r="11" fill="#ffd06c"/>
+<circle cx="395" cy="126" r="11" fill="#43bb98"/>
+<rect x="1198" y="109" width="95" height="36" rx="18" fill="#304466" stroke="#435d83" stroke-width="2"/>
+<circle cx="1223" cy="127" r="9" fill="#b393ff"/>
+<rect x="1241" y="124" width="33" height="6" rx="3" fill="#788cae"/>
+<rect x="279" y="183" width="1043" height="72" rx="22" fill="url(#purple)" stroke="#c5aeff" stroke-width="1.5"/>
+<circle cx="322" cy="219" r="22" fill="#5735aa" stroke="#d7c6ff" stroke-width="2"/>
+<path d="M309 219 L318 228 L337 207" fill="none" stroke="#f6f0ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+<text x="361" y="230" font-family="DejaVu Sans, Arial, sans-serif" font-size="30" font-weight="700" fill="#ffffff">PlannerQuest</text>
+<rect x="1108" y="201" width="184" height="37" rx="19" fill="#6f4ec2" stroke="#cbb4ff" stroke-width="1.5"/>
+<path d="M1131 208 L1135 216 L1143 220 L1135 224 L1131 232 L1127 224 L1119 220 L1127 216 Z" fill="#f9df95" />
+<text x="1153" y="226" font-family="DejaVu Sans, Arial, sans-serif" font-size="17" font-weight="700" fill="#ffffff">MODO RPG</text>
+<rect x="285" y="268" width="118" height="501" rx="28" fill="url(#tile)" stroke="#465c88" stroke-width="2"/>
+<rect x="301" y="290" width="85" height="84" rx="22" fill="#4f3c8b" stroke="#a88af5" stroke-width="3"/>
+<path d="M324 331 L339 345 L363 315" fill="none" stroke="#ded3ff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round" />
+<rect x="305" y="394" width="76" height="76" rx="18" fill="#293959"/>
+<rect x="325" y="412" width="36" height="34" rx="8" fill="none" stroke="#9db3db" stroke-width="4"/>
+<line x1="325" y1="423" x2="361" y2="423" stroke="#9db3db" stroke-width="4" stroke-linecap="round"/>
+<line x1="334" y1="408" x2="334" y2="416" stroke="#9db3db" stroke-width="4" stroke-linecap="round"/>
+<line x1="353" y1="408" x2="353" y2="416" stroke="#9db3db" stroke-width="4" stroke-linecap="round"/>
+<rect x="305" y="490" width="76" height="76" rx="18" fill="#293959"/>
+<path d="M324 510 Q337 505 344 514 Q350 505 362 510 V546 Q351 542 344 551 Q336 542 324 546 Z" fill="none" stroke="#9db3db" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="344" y1="514" x2="344" y2="551" stroke="#9db3db" stroke-width="2" stroke-linecap="round"/>
+<rect x="305" y="586" width="76" height="76" rx="18" fill="#293959"/>
+<path d="M342 605 L359 621 L342 644 L325 621 Z" fill="none" stroke="#b6c7ee" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+<line x1="325" y1="621" x2="359" y2="621" stroke="#b6c7ee" stroke-width="2" stroke-linecap="round"/>
+<circle cx="328" cy="725" r="6" fill="#6b7fa5"/>
+<circle cx="345" cy="725" r="6" fill="#6b7fa5"/>
+<circle cx="362" cy="725" r="6" fill="#6b7fa5"/>
+<rect x="430" y="279" width="549" height="490" rx="26" fill="url(#tile)" stroke="#4a5e8b" stroke-width="2"/>
+<rect x="430" y="279" width="549" height="92" rx="24" fill="#2c3d61"/>
+<rect x="430" y="341" width="549" height="30" rx="0" fill="#2c3d61"/>
+<circle cx="469" cy="322" r="20" fill="#6953ab" stroke="#a98dfb" stroke-width="2"/>
+<path d="M459 323 L467 331 L481 313" fill="none" stroke="#e2d7ff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+<text x="505" y="320" font-family="DejaVu Sans, Arial, sans-serif" font-size="27" font-weight="700" fill="#ffffff">Missões do dia</text>
+<text x="505" y="346" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" fill="#adbddd">Seu progresso, um passo de cada vez</text>
+<rect x="867" y="300" width="85" height="37" rx="19" fill="#594a8b" stroke="#ac90ed" stroke-width="1"/>
+<text x="909" y="326" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="700" fill="#eee5ff" text-anchor="middle">3 / 5</text>
+<rect x="466" y="394" width="477" height="12" rx="6" fill="#14213d"/>
+<rect x="466" y="394" width="286" height="12" rx="6" fill="url(#purple)"/>
+<rect x="461" y="426" width="487" height="68" rx="15" fill="#213352" stroke="#3b527b" stroke-width="1.5"/>
+<circle cx="499" cy="460" r="17" fill="#4a8d89" stroke="#69e2c6" stroke-width="2.5"/>
+<path d="M489 460 L497 468 L509 452" fill="none" stroke="#c7fff3" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+<text x="537" y="468" font-family="DejaVu Sans, Arial, sans-serif" font-size="21" font-weight="600" fill="#dce8ff">Planejar a semana</text>
+<rect x="870" y="448" width="49" height="24" rx="12" fill="#2a4a56"/>
+<text x="895" y="466" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="700" fill="#87ead4" text-anchor="middle">✓</text>
+<rect x="461" y="511" width="487" height="68" rx="15" fill="#213352" stroke="#3b527b" stroke-width="1.5"/>
+<circle cx="499" cy="545" r="17" fill="#4a8d89" stroke="#69e2c6" stroke-width="2.5"/>
+<path d="M489 545 L497 553 L509 537" fill="none" stroke="#c7fff3" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+<text x="537" y="553" font-family="DejaVu Sans, Arial, sans-serif" font-size="21" font-weight="600" fill="#dce8ff">Estudar JavaScript</text>
+<rect x="870" y="533" width="49" height="24" rx="12" fill="#2a4a56"/>
+<text x="895" y="551" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="700" fill="#87ead4" text-anchor="middle">✓</text>
+<rect x="461" y="596" width="487" height="68" rx="15" fill="#213352" stroke="#3b527b" stroke-width="1.5"/>
+<circle cx="499" cy="630" r="17" fill="#4a8d89" stroke="#69e2c6" stroke-width="2.5"/>
+<path d="M489 630 L497 638 L509 622" fill="none" stroke="#c7fff3" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" />
+<text x="537" y="638" font-family="DejaVu Sans, Arial, sans-serif" font-size="21" font-weight="600" fill="#dce8ff">Revisar prioridades</text>
+<rect x="870" y="618" width="49" height="24" rx="12" fill="#2a4a56"/>
+<text x="895" y="636" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="700" fill="#87ead4" text-anchor="middle">✓</text>
+<rect x="461" y="681" width="487" height="68" rx="15" fill="#213352" stroke="#3b527b" stroke-width="1.5"/>
+<circle cx="499" cy="715" r="17" fill="#213352" stroke="#8294b4" stroke-width="2.5"/>
+<text x="537" y="723" font-family="DejaVu Sans, Arial, sans-serif" font-size="21" font-weight="600" fill="#dce8ff">Organizar anotações</text>
+<rect x="872" y="703" width="46" height="24" rx="12" fill="#3e4564"/>
+<text x="895" y="720" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="600" fill="#aab6d8" text-anchor="middle">• •</text>
+<rect x="1001" y="279" width="314" height="306" rx="25" fill="url(#tile)" stroke="#4a5e8b" stroke-width="2"/>
+<text x="1031" y="324" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="700" fill="#f2f3ff">Calendário</text>
+<rect x="1217" y="300" width="69" height="34" rx="17" fill="#39496c"/>
+<text x="1251" y="323" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="700" fill="#c0ccee" text-anchor="middle">NOV</text>
+<line x1="1027" y1="345" x2="1289" y2="345" stroke="#4b5d80" stroke-width="2" stroke-linecap="round"/>
+<text x="1045" y="372" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#93a6cb" text-anchor="middle">D</text>
+<text x="1084" y="372" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#93a6cb" text-anchor="middle">S</text>
+<text x="1123" y="372" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#93a6cb" text-anchor="middle">T</text>
+<text x="1162" y="372" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#93a6cb" text-anchor="middle">Q</text>
+<text x="1201" y="372" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#93a6cb" text-anchor="middle">Q</text>
+<text x="1240" y="372" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#93a6cb" text-anchor="middle">S</text>
+<text x="1279" y="372" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" fill="#93a6cb" text-anchor="middle">S</text>
+<text x="1045" y="401" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#e4e9ff" text-anchor="middle">1</text>
+<text x="1084" y="401" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#e4e9ff" text-anchor="middle">2</text>
+<text x="1123" y="401" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#e4e9ff" text-anchor="middle">3</text>
+<text x="1162" y="401" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#e4e9ff" text-anchor="middle">4</text>
+<text x="1201" y="401" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#e4e9ff" text-anchor="middle">5</text>
+<text x="1240" y="401" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#e4e9ff" text-anchor="middle">6</text>
+<circle cx="1279" cy="395" r="16" fill="#9270ee"/>
+<text x="1279" y="401" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="700" fill="#ffffff" text-anchor="middle">7</text>
+<text x="1045" y="436" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">8</text>
+<text x="1084" y="436" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">9</text>
+<text x="1123" y="436" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">10</text>
+<text x="1162" y="436" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">11</text>
+<text x="1201" y="436" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">12</text>
+<text x="1240" y="436" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">13</text>
+<text x="1279" y="436" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">14</text>
+<text x="1045" y="471" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">15</text>
+<text x="1084" y="471" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">16</text>
+<text x="1123" y="471" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">17</text>
+<text x="1162" y="471" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">18</text>
+<text x="1201" y="471" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">19</text>
+<text x="1240" y="471" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">20</text>
+<text x="1279" y="471" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">21</text>
+<text x="1045" y="506" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">22</text>
+<text x="1084" y="506" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">23</text>
+<text x="1123" y="506" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">24</text>
+<text x="1162" y="506" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">25</text>
+<text x="1201" y="506" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">26</text>
+<text x="1240" y="506" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">27</text>
+<text x="1279" y="506" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">28</text>
+<text x="1045" y="541" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">29</text>
+<text x="1084" y="541" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="500" fill="#abb9d5" text-anchor="middle">30</text>
+<rect x="1030" y="546" width="112" height="22" rx="11" fill="#273d54"/>
+<circle cx="1044" cy="557" r="5" fill="#6ae2c6"/>
+<text x="1058" y="561" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="700" fill="#a3f0df">PLANEJADO</text>
+<rect x="1001" y="605" width="314" height="164" rx="25" fill="url(#tile)" stroke="#4a5e8b" stroke-width="2"/>
+<path d="M1041 630 L1065 630 L1074 642 L1053 666 L1032 642 Z" fill="#554b80" stroke="#c3a4ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+<path d="M1032 642 H1074 M1041 630 L1053 666 L1065 630" fill="none" stroke="#d4c0ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+<text x="1090" y="643" font-family="DejaVu Sans, Arial, sans-serif" font-size="24" font-weight="700" fill="#ffffff">Nível 04</text>
+<text x="1090" y="668" font-family="DejaVu Sans, Arial, sans-serif" font-size="16" font-weight="400" fill="#b1c0dc">Experiência</text>
+<rect x="1031" y="693" width="254" height="14" rx="7" fill="#122241"/>
+<rect x="1031" y="693" width="173" height="14" rx="7" fill="url(#mint)"/>
+<circle cx="1203" cy="700" r="9" fill="#a4f9e4"/>
+<text x="1031" y="746" font-family="DejaVu Sans, Arial, sans-serif" font-size="17" font-weight="700" fill="#bfece3">680 / 1000 XP</text>
+</svg>

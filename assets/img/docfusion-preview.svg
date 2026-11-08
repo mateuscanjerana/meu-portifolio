@@ -1,12 +1,105 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Prévia conceitual do gerenciador de PDF">
-<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#241a20"/><stop offset="1" stop-color="#39252b"/></linearGradient><linearGradient id="g" x2="1" y2="1"><stop stop-color="#d78b79" stop-opacity=".95"/><stop offset="1" stop-color="#d78b79" stop-opacity=".22"/></linearGradient></defs>
-<rect width="800" height="450" fill="url(#bg)"/><circle cx="675" cy="38" r="230" fill="#d78b79" opacity=".06"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="450" viewBox="0 0 800 450" role="img" aria-labelledby="title desc">
+  <title id="title">DocFusion — organização e mesclagem de PDFs</title>
+  <desc id="desc">Ilustração vetorial conceitual do DocFusion, com janela de aplicativo escura, duas páginas PDF entrando em um fluxo de mesclagem e um documento final pronto para exportação.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#10182c"/><stop offset="1" stop-color="#19244a"/></linearGradient>
+    <linearGradient id="window" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#171f3a"/><stop offset="1" stop-color="#121c36"/></linearGradient>
+    <linearGradient id="paper" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#f4f0f1"/><stop offset="1" stop-color="#d9e1f1"/></linearGradient>
+    <linearGradient id="paperMerged" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fcf5f5"/><stop offset="1" stop-color="#e4e4f4"/></linearGradient>
+    <linearGradient id="button" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#eea7a1"/><stop offset="1" stop-color="#cb656f"/></linearGradient>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="5"/></filter>
+  </defs>
 
-<rect x="88" y="62" width="625" height="323" rx="17" fill="#281e29" stroke="#665264"/>
-<text x="119" y="111" fill="#f1dfe7" font-size="25" font-family="Arial" font-weight="bold">DocFusion</text><text x="594" y="106" fill="#c5a7af" font-size="13" font-family="Arial">CONCEITO</text>
-<rect x="128" y="151" width="152" height="194" rx="9" fill="#f5efed"/><path d="M240 151v41h40" fill="#eed7d3"/><rect x="149" y="215" width="102" height="7" rx="3" fill="#c5b4b5"/><rect x="149" y="235" width="90" height="7" rx="3" fill="#c5b4b5"/><rect x="149" y="255" width="110" height="7" rx="3" fill="#c5b4b5"/>
-<text x="204" y="194" text-anchor="middle" font-family="Arial" font-size="22" font-weight="bold" fill="#ba695b">PDF</text>
-<path d="M305 245h104 M389 227l21 18-21 18" fill="none" stroke="#e79c8d" stroke-linecap="round" stroke-linejoin="round" stroke-width="9"/>
-<rect x="442" y="137" width="110" height="158" rx="8" fill="#e7dddd"/><rect x="460" y="172" width="74" height="8" rx="4" fill="#baaaaa"/><rect x="460" y="193" width="65" height="8" rx="4" fill="#baaaaa"/>
-<rect x="558" y="160" width="112" height="158" rx="8" fill="#f5efed"/><text x="614" y="205" text-anchor="middle" fill="#b96759" font-family="Arial" font-weight="bold" font-size="20">PDF</text><rect x="579" y="235" width="70" height="6" rx="3" fill="#b5a8aa"/><rect x="579" y="252" width="70" height="6" rx="3" fill="#b5a8aa"/>
+  <!-- Fundo da família visual do EditPic V1 -->
+  <rect width="800" height="450" fill="url(#bg)"/>
+  <circle cx="675" cy="35" r="230" fill="#ef8792" opacity=".055"/>
+  <path d="M0 385Q170 320 320 451H0Z" fill="#ff9fa7" opacity=".028"/>
+
+  <!-- Janela central -->
+  <rect x="118" y="42" width="564" height="366" rx="23" fill="url(#window)" stroke="#50658e" stroke-opacity=".7" stroke-width="1.4"/>
+  <path d="M141 42H659Q682 42 682 65V87H118V65Q118 42 141 42Z" fill="#233153"/>
+  <path d="M118 86H682" stroke="#34446c" stroke-opacity=".55" stroke-width="2"/>
+  <circle cx="149" cy="64" r="6" fill="#e7787a"/>
+  <circle cx="170" cy="64" r="6" fill="#e9c37b"/>
+  <circle cx="191" cy="64" r="6" fill="#77b99f"/>
+  <rect x="603" y="57" width="48" height="14" rx="7" fill="#3c314d" stroke="#eb9298" stroke-opacity=".38"/>
+  <circle cx="618" cy="64" r="3.6" fill="#ed999d"/>
+  <path d="M625 64h16" stroke="#c2a1b9" stroke-width="2" stroke-linecap="round"/>
+
+  <!-- Barra lateral de ações -->
+  <rect x="138" y="102" width="67" height="286" rx="13" fill="#1d2949" stroke="#3b507b" stroke-opacity=".85"/>
+  <rect x="151" y="116" width="41" height="42" rx="10" fill="#5a394d" stroke="#e58d99" stroke-opacity=".8"/>
+  <!-- ícone documento -->
+  <path d="M163 125h12l7 7v15h-19z" fill="none" stroke="#ffb7b7" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M175 125v8h7M167 139h11m-11 4h8" fill="none" stroke="#ffb7b7" stroke-width="2" stroke-linecap="round"/>
+  <rect x="151" y="176" width="41" height="42" rx="10" fill="#202f51"/>
+  <!-- ícone mesclar -->
+  <rect x="159" y="188" width="14" height="18" rx="2" fill="none" stroke="#a1aacd" stroke-width="2"/>
+  <rect x="169" y="192" width="14" height="18" rx="2" fill="none" stroke="#a1aacd" stroke-width="2"/>
+  <rect x="151" y="236" width="41" height="42" rx="10" fill="#202f51"/>
+  <!-- ícone exportação -->
+  <path d="M172 246v16m-6-6 6 6 6-6m-12 10v3h13v-3" fill="none" stroke="#a1aacd" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="171.5" cy="356" r="4.2" fill="#6f88a6"/>
+  <circle cx="171.5" cy="373" r="4.2" fill="#6f88a6" opacity=".4"/>
+
+  <!-- Área de trabalho -->
+  <rect x="222" y="102" width="440" height="286" rx="15" fill="#131d38" stroke="#34476e" stroke-opacity=".85"/>
+  <rect x="238" y="116" width="408" height="188" rx="12" fill="#1b2948" stroke="#354d78"/>
+
+  <!-- Documentos de entrada -->
+  <g>
+    <rect x="267" y="151" width="81" height="126" rx="9" fill="#111b34" opacity=".55" transform="translate(3 5)"/>
+    <path d="M276 151H325L348 174V268Q348 277 339 277H276Q267 277 267 268V160Q267 151 276 151Z" fill="url(#paper)"/>
+    <path d="M325 151V167Q325 174 333 174H348Z" fill="#b8c5df"/>
+    <rect x="279" y="179" width="38" height="22" rx="6" fill="#db777e"/>
+    <text x="298" y="194.4" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#fff">PDF</text>
+    <rect x="279" y="213" width="56" height="5" rx="2.5" fill="#9dacbf"/>
+    <rect x="279" y="225" width="49" height="5" rx="2.5" fill="#b6c0d0"/>
+    <rect x="279" y="237" width="54" height="5" rx="2.5" fill="#b6c0d0"/>
+    <rect x="279" y="251" width="36" height="5" rx="2.5" fill="#c4cbd8"/>
+  </g>
+  <g>
+    <rect x="361" y="151" width="81" height="126" rx="9" fill="#111b34" opacity=".55" transform="translate(3 5)"/>
+    <path d="M370 151H419L442 174V268Q442 277 433 277H370Q361 277 361 268V160Q361 151 370 151Z" fill="url(#paper)"/>
+    <path d="M419 151V167Q419 174 427 174H442Z" fill="#b8c5df"/>
+    <rect x="373" y="179" width="38" height="22" rx="6" fill="#db777e"/>
+    <text x="392" y="194.4" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="13" fill="#fff">PDF</text>
+    <rect x="373" y="213" width="56" height="5" rx="2.5" fill="#9dacbf"/>
+    <rect x="373" y="225" width="49" height="5" rx="2.5" fill="#b6c0d0"/>
+    <rect x="373" y="237" width="54" height="5" rx="2.5" fill="#b6c0d0"/>
+    <rect x="373" y="251" width="29" height="5" rx="2.5" fill="#c4cbd8"/>
+  </g>
+
+  <!-- Seta de fusão -->
+  <path d="M463 212h35m-11-11 11 11-11 11" stroke="#e7a0aa" fill="none" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Documento resultante -->
+  <rect x="509" y="143" width="110" height="142" rx="11" fill="#da8798" opacity=".16" filter="url(#glow)"/>
+  <rect x="507" y="140" width="106" height="143" rx="12" fill="#f2edf5" opacity=".12"/>
+  <path d="M526 145H586L613 172V267Q613 279 601 279H526Q514 279 514 267V157Q514 145 526 145Z" fill="url(#paperMerged)" stroke="#e99ba3" stroke-width="2.4"/>
+  <path d="M586 145V163Q586 172 595 172H613Z" fill="#c9c7df"/>
+  <rect x="529" y="177" width="44" height="23" rx="6" fill="#d5747c"/>
+  <text x="551" y="193" fill="#fff" font-family="Arial,sans-serif" font-size="13" font-weight="700" text-anchor="middle">PDF</text>
+  <rect x="529" y="211" width="67" height="5" rx="2.5" fill="#9eabc1"/>
+  <rect x="529" y="221" width="52" height="5" rx="2.5" fill="#b7bfd0"/>
+  <path d="M529 236h67" stroke="#d6a3aa" stroke-width="2" stroke-dasharray="3 3"/>
+  <rect x="529" y="245" width="62" height="5" rx="2.5" fill="#aab7c9"/>
+  <rect x="529" y="255" width="49" height="5" rx="2.5" fill="#b7bfd0"/>
+  <circle cx="610" cy="269" r="12" fill="#243b55" stroke="#eda5ae" stroke-width="1.5"/>
+  <path d="m604 269 4 4 8-9" stroke="#ffced0" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Barra inferior de ações -->
+  <rect x="238" y="318" width="408" height="54" rx="11" fill="#202e50" stroke="#40547a" stroke-opacity=".7"/>
+  <rect x="257" y="330" width="49" height="30" rx="7" fill="#2d3a5b" stroke="#5a7297"/>
+  <path d="M271 336h13l5 5v12h-18z" fill="none" stroke="#bbc4dc" stroke-width="1.5"/>
+  <path d="M284 336v6h5" fill="none" stroke="#bbc4dc" stroke-width="1.5"/>
+  <rect x="315" y="330" width="49" height="30" rx="7" fill="#2d3a5b" stroke="#5a7297"/>
+  <path d="M329 336h13l5 5v12h-18z" fill="none" stroke="#bbc4dc" stroke-width="1.5"/>
+  <path d="M342 336v6h5" fill="none" stroke="#bbc4dc" stroke-width="1.5"/>
+  <path d="M375 345h26m-8-7 8 7-8 7" fill="none" stroke="#a5b2ca" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="411" y="330" width="49" height="30" rx="7" fill="#5a394d" stroke="#ed9ca5" stroke-width="1.2"/>
+  <path d="M425 335h13l6 6v13h-19z" fill="none" stroke="#ffc3c5" stroke-width="1.8"/>
+  <path d="M438 335v6h6" stroke="#ffc3c5" stroke-width="1.7" fill="none"/>
+  <rect x="560" y="329" width="64" height="32" rx="8" fill="url(#button)"/>
+  <path d="M592 335v13m-6-6 6 6 6-6m-16 8v4h20v-4" fill="none" stroke="#4e2639" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>

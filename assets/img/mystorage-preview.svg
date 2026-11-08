@@ -1,14 +1,132 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" role="img" aria-label="Painel ilustrativo de controle de estoque">
-<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#102323"/><stop offset="1" stop-color="#183b3d"/></linearGradient><linearGradient id="g" x2="1" y2="1"><stop stop-color="#44baa5" stop-opacity=".95"/><stop offset="1" stop-color="#44baa5" stop-opacity=".22"/></linearGradient></defs>
-<rect width="800" height="450" fill="url(#bg)"/><circle cx="675" cy="38" r="230" fill="#44baa5" opacity=".06"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">MyStorage — ilustração conceitual de um painel de estoque</title>
+<desc id="desc">Janela de sistema em azul-marinho, barra amarela MyStorage, menu lateral, indicadores de produtos, entradas, saídas e lista de estoque.</desc>
+<defs>
+<radialGradient id="bg" cx="50%" cy="46%" r="79%">
+ <stop offset="0%" stop-color="#172449"/>
+ <stop offset="64%" stop-color="#101a37"/>
+ <stop offset="100%" stop-color="#091329"/>
+</radialGradient>
+<linearGradient id="surround" x1="0" y1="0" x2="1" y2="1">
+ <stop stop-color="#425378"/><stop offset="1" stop-color="#10182b"/>
+</linearGradient>
+<linearGradient id="window" x1="0" y1="0" x2="0.9" y2="1">
+ <stop stop-color="#131f3c"/><stop offset="1" stop-color="#0c1530"/>
+</linearGradient>
+<linearGradient id="chrome" x1="0" y1="0" x2="1" y2="0.9">
+ <stop stop-color="#293756"/><stop offset="1" stop-color="#233150"/>
+</linearGradient>
+<linearGradient id="tile" x1="0" y1="0" x2="0.9" y2="1">
+ <stop stop-color="#243657"/><stop offset="1" stop-color="#1a2747"/>
+</linearGradient>
+<linearGradient id="innerTile" x1="0" y1="0" x2="1" y2="1">
+ <stop stop-color="#2d4063"/><stop offset="1" stop-color="#243351"/>
+</linearGradient>
+<linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+ <stop stop-color="#ffd024"/><stop offset="0.57" stop-color="#ffc20b"/><stop offset="1" stop-color="#ffb50a"/>
+</linearGradient>
+<linearGradient id="goldTile" x1="0" y1="0" x2="1" y2="1">
+ <stop stop-color="#8b6116"/><stop offset="0.5" stop-color="#d29b15"/><stop offset="1" stop-color="#855e18"/>
+</linearGradient>
+<linearGradient id="mutedBar" x1="0" y1="0" x2="1" y2="1">
+ <stop stop-color="#798db4" stop-opacity="0.83"/><stop offset="1" stop-color="#62779f" stop-opacity="0.82"/>
+</linearGradient>
+<radialGradient id="light" cx="50%" cy="50%" r="60%">
+ <stop stop-color="#6181bd" stop-opacity=".18"/><stop offset="1" stop-color="#6181bd" stop-opacity="0"/>
+</radialGradient>
+<filter id="shadow" x="-30%" y="-30%" width="160%" height="170%"><feGaussianBlur stdDeviation="24"/></filter>
+<filter id="softShadow" x="-20%" y="-20%" width="140%" height="160%"><feGaussianBlur stdDeviation="5"/></filter>
+<clipPath id="windowClip"><rect x="258" y="88" width="1084" height="714" rx="48"/></clipPath>
+</defs>
 
-<rect x="73" y="57" width="654" height="337" rx="15" fill="#12292a" stroke="#3c7275"/>
-<rect x="73" y="57" width="654" height="53" rx="15" fill="#1b3d3d"/><rect x="73" y="94" width="654" height="16" fill="#1b3d3d"/>
-<text x="110" y="91" fill="#ddfaf5" font-family="Arial,sans-serif" font-size="22" font-weight="bold">MyStorage</text>
-<rect x="106" y="144" width="178" height="88" rx="12" fill="#214b4a"/><text x="126" y="172" fill="#b7dcd6" font-size="16" font-family="Arial">Produtos</text><text x="126" y="215" fill="#f2ffff" font-size="35" font-weight="bold" font-family="Arial">128</text>
-<rect x="305" y="144" width="178" height="88" rx="12" fill="#214b4a"/><text x="325" y="172" fill="#b7dcd6" font-size="16" font-family="Arial">Entradas</text><text x="325" y="215" fill="#f2ffff" font-size="35" font-weight="bold" font-family="Arial">+42</text>
-<rect x="505" y="144" width="178" height="88" rx="12" fill="#214b4a"/><text x="525" y="172" fill="#b7dcd6" font-size="16" font-family="Arial">Saídas</text><text x="525" y="215" fill="#f2ffff" font-size="35" font-weight="bold" font-family="Arial">-19</text>
-<rect x="106" y="250" width="577" height="100" rx="12" fill="#1b3739"/><path d="M125 281H664 M125 313H664" stroke="#305659" stroke-width="2"/>
-<rect x="130" y="270" width="125" height="9" rx="4" fill="#93aead"/><rect x="130" y="295" width="165" height="8" rx="4" fill="#5c8988"/><rect x="130" y="330" width="145" height="8" rx="4" fill="#5c8988"/>
-<rect x="581" y="292" width="72" height="18" rx="9" fill="#409e8f"/><rect x="581" y="324" width="72" height="18" rx="9" fill="#409e8f"/>
+<rect x="0" y="0" width="1600" height="900" rx="0" fill="url(#bg)"/>
+<ellipse cx="1411" cy="118" rx="520" ry="405" fill="url(#surround)" opacity=".4"/>
+<ellipse cx="205" cy="951" rx="510" ry="285" fill="url(#surround)" opacity=".4"/>
+<rect x="140" y="0" width="1400" height="900" rx="0" fill="url(#light)" opacity="0.72"/>
+<rect x="262" y="113" width="1085" height="715" rx="48" fill="#010719" opacity="0.53" filter="url(#shadow)"/>
+<rect x="258" y="88" width="1084" height="714" rx="48" fill="url(#window)" stroke="#485c87" stroke-width="3"/>
+<g clip-path="url(#windowClip)">
+<rect x="258" y="88" width="1084" height="77" rx="0" fill="url(#chrome)"/>
+<rect x="258" y="162" width="1084" height="3" rx="0" fill="#51658d" opacity="0.67"/>
+<circle cx="313" cy="126" r="11" fill="#ff747e"/>
+<circle cx="353" cy="126" r="11" fill="#ffc948"/>
+<circle cx="394" cy="126" r="11" fill="#45b88e"/>
+<rect x="1196" y="110" width="94" height="36" rx="18" fill="#304365" stroke="#405477" stroke-width="1.3"/>
+<circle cx="1221" cy="128" r="9" fill="#ffcc21"/>
+<rect x="1237" y="125" width="34" height="5" rx="2.5" fill="#536a91"/>
+<rect x="280" y="183" width="1042" height="72" rx="20" fill="url(#gold)" stroke="#ffdc57" stroke-width="2"/>
+<text x="318" y="229" font-family="Inter, Arial, Helvetica, sans-serif" font-size="30" font-weight="750" text-anchor="start" fill="#ffffff" >MyStorage</text>
+<rect x="285" y="267" width="118" height="503" rx="28" fill="url(#tile)" stroke="#41547d" stroke-width="2"/>
+<rect x="301" y="290" width="83" height="83" rx="21" fill="#f5c008" filter="url(#softShadow)"/>
+<rect x="301" y="290" width="83" height="83" rx="21" fill="url(#goldTile)" stroke="#ffce2a" stroke-width="3"/>
+<path d="M322 313 L342 302 L363 314 L343 326 Z" fill="none" stroke="#ffe09a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M322 313 L322 342 L343 354 L343 326" fill="none" stroke="#ffe09a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M363 314 L363 343 L343 354" fill="none" stroke="#ffe09a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="303" y="390" width="79" height="76" rx="17" fill="#243453"/>
+<rect x="303" y="486" width="79" height="76" rx="17" fill="#243453"/>
+<rect x="303" y="582" width="79" height="76" rx="17" fill="#243453"/>
+<path d="M318 425 H347 M335 412 L348 425 L335 438" fill="none" stroke="#b3c6e8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M338 407 H362 Q368 407 368 414 V444 Q368 450 362 450 H339" fill="none" stroke="#b3c6e8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M317 509 H337 M317 509 V538 Q317 545 324 545 H339" fill="none" stroke="#b3c6e8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M336 525 H365 M352 513 L365 525 L352 537" fill="none" stroke="#b3c6e8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="321" y="630" width="9" height="16" rx="2" fill="#b3c6e8"/>
+<rect x="337" y="618" width="9" height="28" rx="2" fill="#b3c6e8"/>
+<rect x="353" y="602" width="9" height="44" rx="2" fill="#b3c6e8"/>
+<rect x="432" y="287" width="290" height="133" rx="22" fill="url(#tile)" stroke="#3d527b" stroke-width="2.2"/>
+<rect x="745" y="287" width="284" height="133" rx="22" fill="url(#tile)" stroke="#3d527b" stroke-width="2.2"/>
+<rect x="1051" y="287" width="269" height="133" rx="22" fill="url(#tile)" stroke="#3d527b" stroke-width="2.2"/>
+<rect x="465" y="316" width="78" height="78" rx="17" fill="url(#innerTile)"/>
+<rect x="776" y="316" width="78" height="78" rx="17" fill="#254957" opacity="0.75"/>
+<rect x="1084" y="316" width="78" height="78" rx="17" fill="#47394f" opacity="0.75"/>
+<path d="M482 336 L501 325 L522 337 L503 348 Z" fill="none" stroke="#ffd57e" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M482 336 L482 362 L503 375 L503 348" fill="none" stroke="#ffd57e" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M522 337 L522 364 L503 375" fill="none" stroke="#ffd57e" stroke-width="3.3" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M491 330 L513 343" fill="none" stroke="#ffd57e" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M791 356 H830 M816 343 L831 356 L816 369" fill="none" stroke="#8de09b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M815 336 H834 Q841 336 841 343 V370 Q841 377 834 377 H814" fill="none" stroke="#8de09b" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1126 334 H1108 Q1101 334 1101 341 V368 Q1101 375 1108 375 H1125" fill="none" stroke="#ff8681" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M1117 355 H1146 M1135 344 L1146 355 L1135 366" fill="none" stroke="#ff8681" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="567" y="337" font-family="Inter, Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="start" fill="#aec2e7" >Produtos</text>
+<text x="567" y="389" font-family="Inter, Arial, Helvetica, sans-serif" font-size="42" font-weight="730" text-anchor="start" fill="#f4f7ff" >128</text>
+<text x="879" y="337" font-family="Inter, Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="start" fill="#aec2e7" >Entradas</text>
+<text x="879" y="389" font-family="Inter, Arial, Helvetica, sans-serif" font-size="42" font-weight="730" text-anchor="start" fill="#f4f7ff" >37</text>
+<text x="1183" y="337" font-family="Inter, Arial, Helvetica, sans-serif" font-size="23" font-weight="600" text-anchor="start" fill="#aec2e7" >Saídas</text>
+<text x="1183" y="389" font-family="Inter, Arial, Helvetica, sans-serif" font-size="42" font-weight="730" text-anchor="start" fill="#f4f7ff" >24</text>
+<rect x="432" y="447" width="888" height="307" rx="22" fill="url(#tile)" stroke="#3f527a" stroke-width="2"/>
+<rect x="432" y="447" width="888" height="63" rx="22" fill="#304064"/>
+<rect x="432" y="475" width="888" height="35" rx="0" fill="#304064"/>
+<rect x="432" y="509" width="888" height="2" rx="0" fill="#44577d"/>
+<rect x="472" y="473" width="109" height="16" rx="8" fill="url(#mutedBar)"/>
+<rect x="886" y="473" width="108" height="16" rx="8" fill="url(#mutedBar)"/>
+<rect x="1151" y="473" width="107" height="16" rx="8" fill="url(#mutedBar)"/>
+<rect x="472" y="516" width="75" height="66" rx="15" fill="url(#innerTile)"/>
+<rect x="585" y="540" width="160" height="18" rx="9" fill="url(#mutedBar)"/>
+<rect x="887" y="544" width="92" height="12" rx="6" fill="url(#mutedBar)"/>
+<rect x="1157" y="530" width="101" height="43" rx="22" fill="#564d3b" stroke="#ffcb30" stroke-width="2.3"/>
+<rect x="472" y="595" width="75" height="66" rx="15" fill="url(#innerTile)"/>
+<rect x="585" y="619" width="160" height="18" rx="9" fill="url(#mutedBar)"/>
+<rect x="887" y="623" width="92" height="12" rx="6" fill="url(#mutedBar)"/>
+<rect x="1157" y="609" width="101" height="43" rx="22" fill="#564d3b" stroke="#ffcb30" stroke-width="2.3"/>
+<rect x="472" y="673" width="75" height="66" rx="15" fill="url(#innerTile)"/>
+<rect x="585" y="697" width="160" height="18" rx="9" fill="url(#mutedBar)"/>
+<rect x="887" y="701" width="92" height="12" rx="6" fill="url(#mutedBar)"/>
+<rect x="1157" y="687" width="101" height="43" rx="22" fill="#564d3b" stroke="#ffcb30" stroke-width="2.3"/>
+<rect x="452" y="590" width="848" height="2" rx="0" fill="#405174"/>
+<rect x="452" y="668" width="848" height="2" rx="0" fill="#405174"/>
+<text x="1208" y="559" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#ffffff" >42</text>
+<text x="1208" y="638" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#ffffff" >18</text>
+<text x="1208" y="716" font-family="Inter, Arial, Helvetica, sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#ffffff" >68</text>
+<path d="M490 537 L510 526 L528 537 L508 548 Z" fill="none" stroke="#ffcf65" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M490 537 V564 L508 574 V548" fill="none" stroke="#ffcf65" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M528 537 V563 L508 574" fill="none" stroke="#ffcf65" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M501 531 L518 542" fill="none" stroke="#ffcf65" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+<ellipse cx="509" cy="617" rx="17" ry="8" fill="none" stroke="#ffd272" stroke-width="3.5"/>
+<path d="M492 617 V647 C492 655 526 655 526 647 V617" fill="none" stroke="#ffd272" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M492 631 C492 639 526 639 526 631" fill="none" stroke="#ffd272" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M492 640 C492 648 526 648 526 640" fill="none" stroke="#ffd272" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M500 688 H517 V698 L523 708 V732 Q523 736 519 736 H498 Q495 736 495 732 V708 L500 698 Z" fill="none" stroke="#ffd272" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="502" y="686" width="13" height="5" rx="2" fill="#ffd272"/>
+<rect x="501" y="709" width="17" height="15" rx="3" fill="#c9a04f"/>
+</g>
+<rect x="258" y="88" width="1084" height="714" rx="48" fill="none" stroke="#50648e" stroke-width="2.5"/>
 </svg>
