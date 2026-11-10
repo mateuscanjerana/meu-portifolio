@@ -18,9 +18,9 @@
     />
     <!-- Biblioteca de ícones Unicons -->
     <link
-    rel="stylesheet"
-    href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
-    >
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.8/css/line.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
   <body class="dark-theme" data-palette="black">
@@ -34,37 +34,25 @@
           <ul class="nav_list grid">
             <li class="nav_item">
               <a href="#home" class="nav_link active-link"
-                ><i
-                  class="uil uil-estate nav_icon"
-                  aria-hidden="true"
-                ></i
+                ><i class="uil uil-estate nav_icon" aria-hidden="true"></i
                 >Início</a
               >
             </li>
             <li class="nav_item">
               <a href="#about" class="nav_link"
-                ><i
-                  class="uil uil-user nav_icon"
-                  aria-hidden="true"
-                ></i
+                ><i class="uil uil-user nav_icon" aria-hidden="true"></i
                 >Sobre</a
               >
             </li>
             <li class="nav_item">
               <a href="#portifolio" class="nav_link"
-                ><i
-                  class="uil uil-scenery nav_icon"
-                  aria-hidden="true"
-                ></i
+                ><i class="uil uil-scenery nav_icon" aria-hidden="true"></i
                 >Portfólio</a
               >
             </li>
             <li class="nav_item">
               <a href="#contato" class="nav_link"
-                ><i
-                  class="uil uil-message nav_icon"
-                  aria-hidden="true"
-                ></i
+                ><i class="uil uil-message nav_icon" aria-hidden="true"></i
                 >Contato</a
               >
             </li>
@@ -91,10 +79,7 @@
               aria-expanded="false"
               title="Cores do site"
             >
-              <i
-                class="uil uil-palette"
-                aria-hidden="true"
-              ></i>
+              <i class="uil uil-palette" aria-hidden="true"></i>
             </button>
             <div
               id="palette-menu"
@@ -140,19 +125,65 @@
               </div>
             </div>
           </div>
-          <button
-            class="icon-button charge-theme"
-            type="button"
-            id="theme-button"
-            aria-label="Ativar modo claro"
-            title="Alternar claro e escuro"
-          >
-            <i
-              class="uil uil-sun"
-              id="theme-icon"
-              aria-hidden="true"
-            ></i>
-          </button>
+          <!-- Controle de aparência -->
+          <div class="theme_mode_picker">
+            <button
+              class="icon-button charge-theme"
+              type="button"
+              id="theme-button"
+              aria-label="Escolher aparência"
+              aria-controls="theme-mode-menu"
+              aria-haspopup="true"
+              aria-expanded="false"
+              title="Aparência do site"
+            >
+              <i class="uil uil-desktop" id="theme-icon" aria-hidden="true"></i>
+            </button>
+
+            <div
+              class="theme_mode_menu"
+              id="theme-mode-menu"
+              role="group"
+              aria-label="Modo de aparência"
+              hidden
+            >
+              <span class="palette_title">Aparência</span>
+
+              <button
+                type="button"
+                data-mode="system"
+                aria-label="Seguir tema do sistema"
+                aria-pressed="true"
+                title="Sistema"
+              >
+                <i class="uil uil-desktop" aria-hidden="true"></i>
+                Sistema
+              </button>
+
+              <button
+                type="button"
+                data-mode="light"
+                aria-label="Ativar modo claro"
+                aria-pressed="false"
+                title="Claro"
+              >
+                <i class="uil uil-sun" aria-hidden="true"></i>
+                Claro
+              </button>
+
+              <button
+                type="button"
+                data-mode="dark"
+                aria-label="Ativar modo escuro"
+                aria-pressed="false"
+                title="Escuro"
+              >
+                <i class="uil uil-moon" aria-hidden="true"></i>
+                Escuro
+              </button>
+            </div>
+          </div>
+
           <button
             class="nav_toggle icon-button"
             type="button"
@@ -178,10 +209,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
-                ><i
-                  class="uil uil-linkedin-alt"
-                  aria-hidden="true"
-                ></i
+                ><i class="uil uil-linkedin-alt" aria-hidden="true"></i
               ></a>
               <a
                 href="https://www.instagram.com/mateus_canjerana"
@@ -189,10 +217,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                ><i
-                  class="uil uil-instagram"
-                  aria-hidden="true"
-                ></i
+                ><i class="uil uil-instagram" aria-hidden="true"></i
               ></a>
               <a
                 href="https://github.com/MateusCanjerana"
@@ -200,10 +225,7 @@
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="GitHub"
-                ><i
-                  class="uil uil-github-alt"
-                  aria-hidden="true"
-                ></i
+                ><i class="uil uil-github-alt" aria-hidden="true"></i
               ></a>
             </div>
             <!-- Marca autoral em transparência, integrada ao fundo sem card/moldura -->
@@ -241,10 +263,7 @@
               </p>
               <a href="#contato" class="button button-flex"
                 >Fale comigo
-                <i
-                  class="uil uil-message button_icon"
-                  aria-hidden="true"
-                ></i
+                <i class="uil uil-message button_icon" aria-hidden="true"></i
               ></a>
             </div>
           </div>
@@ -284,27 +303,26 @@
                 <span class="syntax-yellow">{</span>
               </p>
               <p>
-                <span class="code_line">02</span>  nome:
+                <span class="code_line">02</span> nome:
                 <span class="syntax-green">'Mateus'</span>,
               </p>
               <p>
-                <span class="code_line">03</span>  foco:
+                <span class="code_line">03</span> foco:
                 <span class="syntax-green">'Web'</span>,
               </p>
               <p>
-                <span class="code_line">04</span>  stack: [<span
+                <span class="code_line">04</span> stack: [<span
                   class="syntax-green"
                   >'HTML'</span
                 >,
               </p>
               <p>
-                <span class="code_line">05</span>   <span
-                  class="syntax-green"
-                  >'CSS'</span
-                >, <span class="syntax-green">'JS'</span>],
+                <span class="code_line">05</span>
+                <span class="syntax-green">'CSS'</span>,
+                <span class="syntax-green">'JS'</span>],
               </p>
               <p>
-                <span class="code_line">06</span>  objetivo:
+                <span class="code_line">06</span> objetivo:
                 <span class="syntax-green">'Criar'</span>
               </p>
               <p>
@@ -313,10 +331,7 @@
               </p>
             </div>
             <div class="editor_status">
-              <i
-                class="uil uil-code-branch"
-                aria-hidden="true"
-              ></i>
+              <i class="uil uil-code-branch" aria-hidden="true"></i>
               sempre aprendendo <span>UTF-8</span>
             </div>
           </div>
@@ -371,10 +386,7 @@
             type="button"
             aria-label="Projeto anterior"
           >
-            <i
-              class="uil uil-angle-left-b"
-              aria-hidden="true"
-            ></i>
+            <i class="uil uil-angle-left-b" aria-hidden="true"></i>
           </button>
           <div class="slide-content">
             <div class="card-wrapper">
@@ -494,7 +506,7 @@
                   <span class="project_category">PRODUTIVIDADE</span>
                   <h3 class="portifolio_title name">PlannerQuest</h3>
                   <p class="portifolio_description description">
-                     Planner pessoal para organizar tarefas, hábitos e estudos.
+                    Planner pessoal para organizar tarefas, hábitos e estudos.
                   </p>
                   <div class="card-actions">
                     <button type="button" class="button button--details">
@@ -510,10 +522,7 @@
             type="button"
             aria-label="Próximo projeto"
           >
-            <i
-              class="uil uil-angle-right-b"
-              aria-hidden="true"
-            ></i>
+            <i class="uil uil-angle-right-b" aria-hidden="true"></i>
           </button>
           <div
             class="slide-pagination"
@@ -598,28 +607,19 @@
               aria-label="LinkedIn"
               target="_blank"
               rel="noopener noreferrer"
-              ><i
-                class="uil uil-linkedin-alt"
-                aria-hidden="true"
-              ></i></a
+              ><i class="uil uil-linkedin-alt" aria-hidden="true"></i></a
             ><a
               href="https://www.instagram.com/mateus_canjerana"
               aria-label="Instagram"
               target="_blank"
               rel="noopener noreferrer"
-              ><i
-                class="uil uil-instagram"
-                aria-hidden="true"
-              ></i></a
+              ><i class="uil uil-instagram" aria-hidden="true"></i></a
             ><a
               href="https://github.com/MateusCanjerana"
               aria-label="GitHub"
               target="_blank"
               rel="noopener noreferrer"
-              ><i
-                class="uil uil-github-alt"
-                aria-hidden="true"
-              ></i
+              ><i class="uil uil-github-alt" aria-hidden="true"></i
             ></a>
           </div>
         </div>
@@ -634,10 +634,7 @@
       class="scroll_up"
       id="scroll-up"
       aria-label="Voltar ao início"
-      ><i
-        class="uil uil-arrow-up scrollup_icon"
-        aria-hidden="true"
-      ></i
+      ><i class="uil uil-arrow-up scrollup_icon" aria-hidden="true"></i
     ></a>
     <!-- Modal nativo: acessibilidade e fechamento por ESC sem biblioteca -->
     <dialog
@@ -663,16 +660,13 @@
           <p id="modal-description"></p>
           <a id="modal-link" class="button button-flex" href="#home"
             >Visitar projeto
-            <i
-              class="uil uil-arrow-up-right button_icon"
-              aria-hidden="true"
-            ></i
+            <i class="uil uil-arrow-up-right button_icon" aria-hidden="true"></i
           ></a>
         </div>
       </div>
     </dialog>
     <!-- Scripts de interface: ficam antes do fechamento do body. -->
-  <script src="assets/js/script.js" defer></script>
-  <script src="assets/js/carousel.js" defer></script>
-</body>
+    <script src="assets/js/script.js" defer></script>
+    <script src="assets/js/carousel.js" defer></script>
+  </body>
 </html>

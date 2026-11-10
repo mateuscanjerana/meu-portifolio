@@ -50,33 +50,29 @@ body[data-palette="red"] {
 }
 /* Recalcula as cores conforme a paleta escolhida */
 body[data-palette] {
-  --first-color:
-  hsl(var(--hue-color), 69%, 55%);
-  --first-color-second:
-  hsl(var(--hue-color), 69%, 61%);
-  --first-color-alt:
-  hsl(var(--hue-color), 70%, 46%);
-  --first-color-lighter:
-  hsl(var(--hue-color), 92%, 85%);
+  --first-color: hsl(var(--hue-color), 69%, 55%);
+  --first-color-second: hsl(var(--hue-color), 69%, 61%);
+  --first-color-alt: hsl(var(--hue-color), 70%, 46%);
+  --first-color-lighter: hsl(var(--hue-color), 92%, 85%);
   --button-label-color: #ffffff;
 }
 /* Paleta laranja */
 body[data-palette="orange"] {
-    --hue-color: 25;
+  --hue-color: 25;
 
-    --first-color: #c2410c;
-    --first-color-alt: #9a3412;
-    --first-color-second: #ea580c;
-    --first-color-lighter: #fed7aa;
+  --first-color: #c2410c;
+  --first-color-alt: #9a3412;
+  --first-color-second: #ea580c;
+  --first-color-lighter: #fed7aa;
 
-    --button-label-color: #ffffff;
+  --button-label-color: #ffffff;
 }
 
 /* Versão laranja para modo escuro */
 body.dark-theme[data-palette="orange"] {
-    --first-color: #fb923c;
-    --first-color-alt: #fdba74;
-    --button-label-color: #111827;
+  --first-color: #fb923c;
+  --first-color-alt: #fdba74;
+  --button-label-color: #111827;
 }
 body[data-palette="black"] {
   --first-color: #323945;
@@ -119,8 +115,8 @@ body {
   color: var(--text-color);
   font: var(--normal-font-size)/1.75 var(--body-font);
   transition:
-  background-color 0.25s,
-  color 0.25s;
+    background-color 0.25s,
+    color 0.25s;
 }
 button,
 a {
@@ -214,8 +210,8 @@ h4 {
   backdrop-filter: blur(16px);
   border-bottom: 1px solid transparent;
   transition:
-  border-color 0.2s,
-  background 0.2s;
+    border-color 0.2s,
+    background 0.2s;
 }
 .header.scroll-header {
   border-bottom-color: var(--border-color);
@@ -303,6 +299,86 @@ h4 {
   background: var(--container-color);
   box-shadow: 0 16px 40px #0003;
 }
+
+/* =========================================
+   SELETOR DE APARÊNCIA COM ÍCONES
+   ========================================= */
+
+.theme_mode_picker {
+  position: relative;
+}
+
+.theme_mode_menu {
+  position: absolute;
+
+  /* Desktop: abre abaixo do botão */
+  top: calc(100% + 0.8rem);
+  bottom: auto;
+  right: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+
+  width: 54px;
+  padding: 0.35rem;
+
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+
+  background: var(--container-color);
+  box-shadow: 0 12px 30px #0003;
+
+  z-index: calc(var(--z-fixed) + 1);
+}
+
+.theme_mode_menu[hidden] {
+  display: none;
+}
+
+.theme_mode_menu button {
+  display: grid;
+  place-items: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 0;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+  color: var(--text-color);
+
+  cursor: pointer;
+}
+
+.theme_mode_menu button i {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.theme_mode_menu button:hover,
+.theme_mode_menu button[aria-pressed="true"] {
+  background: var(--surface-secondary);
+  color: var(--first-color);
+}
+
+.theme_mode_menu button:focus-visible {
+  outline: 2px solid var(--first-color);
+  outline-offset: 2px;
+}
+
+/* Mobile: abre acima do botão */
+@media (max-width: 767px) {
+  .theme_mode_menu {
+    top: auto;
+    bottom: calc(100% + 1rem);
+    right: 0;
+  }
+}
+
 .palette_title {
   display: block;
   margin-bottom: 0.65rem;
@@ -333,7 +409,7 @@ h4 {
   background: #c95161;
 }
 .palette_swatch[data-color="orange"] {
-    background: #f97316;
+  background: #f97316;
 }
 .palette_swatch[aria-pressed="true"] {
   outline: 2px solid var(--title-color);
@@ -364,9 +440,9 @@ h4 {
   aspect-ratio: 1;
   border-radius: 50%;
   background: radial-gradient(
-  circle,
-  color-mix(in srgb, var(--first-color) 9%, transparent) 0%,
-  transparent 68%
+    circle,
+    color-mix(in srgb, var(--first-color) 9%, transparent) 0%,
+    transparent 68%
   );
   z-index: -1;
   pointer-events: none;
@@ -390,8 +466,8 @@ h4 {
   font-size: 1.35rem;
   color: var(--first-color);
   transition:
-  color 0.2s,
-  transform 0.2s;
+    color 0.2s,
+    transform 0.2s;
 }
 .home_social-icon:hover {
   color: var(--first-color-alt);
@@ -523,9 +599,9 @@ body:not(.dark-theme) .hero_monogram {
   line-height: 1.4;
   text-align: center;
   transition:
-  background var(--transition-default),
-  transform var(--transition-default),
-  color var(--transition-default);
+    background var(--transition-default),
+    transform var(--transition-default),
+    color var(--transition-default);
 }
 .button:hover {
   background: var(--first-color-alt);
@@ -544,13 +620,13 @@ body:not(.dark-theme) .hero_monogram {
 }
 /* Botão WhatsApp acompanha a paleta ativa */
 .contato_actions .button-white {
-    background-color: var(--first-color);
-    color: var(--button-label-color);
+  background-color: var(--first-color);
+  color: var(--button-label-color);
 }
 
 .contato_actions .button-white:hover {
-    background-color: var(--first-color-alt);
-    color: var(--button-label-color);
+  background-color: var(--first-color-alt);
+  color: var(--button-label-color);
 }
 .button-outline {
   background: transparent;
@@ -610,8 +686,8 @@ body:not(.dark-theme) .hero_monogram {
   text-align: center;
   margin-right: 30px;
   font:
-  500 0.77rem ui-monospace,
-  monospace;
+    500 0.77rem ui-monospace,
+    monospace;
   color: var(--text-color-ligth);
 }
 .editor_body {
@@ -621,9 +697,9 @@ body:not(.dark-theme) .hero_monogram {
   padding: clamp(1rem, 3.3vw, 2rem) 1.3rem;
   color: var(--title-color);
   font:
-  500 clamp(0.7rem, 1.6vw, 0.95rem)/2 ui-monospace,
-  Consolas,
-  monospace;
+    500 clamp(0.7rem, 1.6vw, 0.95rem)/2 ui-monospace,
+    Consolas,
+    monospace;
   white-space: nowrap;
 }
 .code_line {
@@ -703,10 +779,11 @@ body:not(.dark-theme) .hero_monogram {
 }
 /* Card padrão */
 .portifolio .card {
-  flex: 0 0 calc(
-  (100% - (var(--cards-visible) - 1)
-  * var(--card-gap)) / var(--cards-visible)
-  );
+  flex: 0 0
+    calc(
+      (100% - (var(--cards-visible) - 1) * var(--card-gap)) /
+        var(--cards-visible)
+    );
   min-width: 0;
   display: flex;
   flex-direction: column;
@@ -812,8 +889,8 @@ body:not(.dark-theme) .hero_monogram {
   font-size: 1.7rem;
   transform: translateY(-50%);
   transition:
-  background 0.2s,
-  color 0.2s;
+    background 0.2s,
+    color 0.2s;
 }
 .slide-nav:hover {
   background: var(--first-color);
@@ -842,8 +919,8 @@ body:not(.dark-theme) .hero_monogram {
   border-radius: 50px;
   background: var(--scroll-thumb-color);
   transition:
-  width 250ms,
-  background 250ms;
+    width 250ms,
+    background 250ms;
 }
 .slide-dot.is-active {
   width: 25px;
@@ -859,7 +936,7 @@ body:not(.dark-theme) .hero_monogram {
   margin: auto;
   padding: 0;
   border: 1px solid
-  color-mix(in srgb, var(--first-color) 32%, var(--border-color));
+    color-mix(in srgb, var(--first-color) 32%, var(--border-color));
   border-radius: 22px;
   color: var(--text-color);
   background: color-mix(in srgb, var(--container-color) 88%, transparent);
@@ -936,9 +1013,9 @@ body:not(.dark-theme) .hero_monogram {
   border: 1px solid var(--border-color);
   border-radius: 24px;
   background: linear-gradient(
-  130deg,
-  color-mix(in srgb, var(--first-color) 9%, var(--container-color)),
-  var(--container-color) 65%
+    130deg,
+    color-mix(in srgb, var(--first-color) 9%, var(--container-color)),
+    var(--container-color) 65%
   );
   overflow: hidden;
 }
@@ -1074,8 +1151,8 @@ body:not(.dark-theme) .footer_bg {
   color: var(--button-label-color);
   box-shadow: 0 8px 20px #0002;
   transition:
-  bottom 0.3s,
-  background 0.2s;
+    bottom 0.3s,
+    background 0.2s;
 }
 .scroll_up.show-scroll {
   bottom: 1.2rem;
@@ -1127,16 +1204,16 @@ body:not(.dark-theme) .footer_bg {
 /* Tablet: setas discretamente ocultas, conforme o modelo de referência. */
 /* Ocultar setas no tablet e mobile */
 @media (max-width: 980px) {
-    .slide-nav {
-        display: none;
-    }
+  .slide-nav {
+    display: none;
+  }
 }
 
 /* Espaçamento específico do tablet */
 @media (min-width: 641px) and (max-width: 980px) {
-    .portifolio_container.slide-container {
-        padding-inline: 1.5rem;
-    }
+  .portifolio_container.slide-container {
+    padding-inline: 1.5rem;
+  }
 }
 @media (max-width: 767px) {
   :root {
@@ -1146,7 +1223,7 @@ body:not(.dark-theme) .footer_bg {
     padding-bottom: 0;
   }
   html {
-        scroll-padding-top: 0;
+    scroll-padding-top: 0;
   }
   .header {
     top: auto;
@@ -1191,8 +1268,8 @@ body:not(.dark-theme) .footer_bg {
     visibility: hidden;
     pointer-events: none;
     transition:
-    transform 320ms ease,
-    visibility 320ms;
+      transform 320ms ease,
+      visibility 320ms;
   }
   .nav_menu.show-menu {
     transform: translateY(0);
@@ -1229,6 +1306,30 @@ body:not(.dark-theme) .footer_bg {
     bottom: calc(100% + 1rem);
     right: -2.6rem;
   }
+
+  /* Menu de aparência na versão mobile */
+  .theme_mode_menu {
+    top: auto;
+    bottom: calc(100% + 1rem);
+    right: -0.5rem;
+
+    width: min(180px, calc(100vw - 2rem));
+  }
+
+  /* Transição do controle de aparência */
+  .theme_mode_picker {
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease;
+  }
+
+  /* Oculta o controle quando o menu mobile abre */
+  body.menu-open .theme_mode_picker {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
   .section {
     padding-top: var(--section-space-mobile);
     padding-bottom: 1.25rem;
@@ -1282,7 +1383,8 @@ body:not(.dark-theme) .footer_bg {
     grid-template-columns: minmax(0, 1fr);
     gap: 1.75rem;
   }
-  .about_visual, .about_data {
+  .about_visual,
+  .about_data {
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -1340,19 +1442,19 @@ body:not(.dark-theme) .footer_bg {
     padding: 1.45rem 1.4rem 1.8rem;
   }
   .theme-trigger,
-    .charge-theme {
-        transition:
-            opacity 0.2s ease,
-            visibility 0.2s ease;
-    }
+  .charge-theme {
+    transition:
+      opacity 0.2s ease,
+      visibility 0.2s ease;
+  }
 
-    /* Esconde os dois de maneira uniforme */
-    body.menu-open .theme-trigger,
-    body.menu-open .charge-theme {
-        opacity: 0;
-        visibility: hidden;
-        pointer-events: none;
-    }
+  /* Esconde os dois de maneira uniforme */
+  body.menu-open .theme-trigger,
+  body.menu-open .charge-theme {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 @media (max-width: 640px) {
   :root {
@@ -1414,5 +1516,114 @@ body:not(.dark-theme) .footer_bg {
     scroll-behavior: auto !important;
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* =========================================
+   PORTFÓLIO MC — V1.4
+   CORREÇÃO DOS MENUS DE PERSONALIZAÇÃO
+   ========================================= */
+
+/* Restaura o seletor com ícones e textos */
+
+.theme_mode_picker {
+  position: relative;
+}
+
+.theme_mode_menu {
+  position: absolute;
+  display: block;
+
+  top: calc(100% + 0.8rem);
+  bottom: auto;
+  right: 0;
+
+  width: 180px;
+  padding: 0.65rem;
+
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+
+  background: var(--container-color);
+  box-shadow: 0 16px 40px #0003;
+
+  z-index: calc(var(--z-fixed) + 1);
+}
+
+.theme_mode_menu[hidden] {
+  display: none;
+}
+
+.theme_mode_menu .palette_title {
+  display: block;
+  padding: 0 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.theme_mode_menu button {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.7rem;
+
+  width: 100%;
+  height: auto;
+  min-height: 40px;
+  padding: 0.7rem;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+  color: var(--text-color);
+
+  font: inherit;
+  font-size: 0.85rem;
+  text-align: left;
+  cursor: pointer;
+}
+
+.theme_mode_menu button i {
+  width: 1.2rem;
+  flex-shrink: 0;
+
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.theme_mode_menu button:hover,
+.theme_mode_menu button[aria-pressed="true"] {
+  background: var(--surface-secondary);
+  color: var(--first-color);
+}
+
+.theme_mode_menu button:focus-visible {
+  outline: 2px solid var(--first-color);
+  outline-offset: 2px;
+}
+
+/* =========================================
+   AJUSTES MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+  /* Menu de aparência abre para cima */
+  .theme_mode_menu {
+    top: auto;
+    bottom: calc(100% + 1rem);
+    right: -0.5rem;
+
+    width: min(180px, calc(100vw - 2rem));
+  }
+
+  /* Esconde Voltar ao topo quando
+     qualquer menu de personalização abrir */
+
+  body:has(#palette-menu:not([hidden])) #scroll-up,
+  body:has(#theme-mode-menu:not([hidden])) #scroll-up,
+  body.menu-open #scroll-up {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
   }
 }
