@@ -48,7 +48,7 @@
   const paletteButton = document.getElementById('palette-button');
   const paletteMenu = document.getElementById('palette-menu');
   const swatches = [...document.querySelectorAll('.palette_swatch')];
-  const acceptedPalettes = new Set(['black','blue','red','green']);
+  const acceptedPalettes = new Set(['black','blue','red','orange']);
 
   function safeRead(key) {
     try { return localStorage.getItem(key); } catch { return null; }

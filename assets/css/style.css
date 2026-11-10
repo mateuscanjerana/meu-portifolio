@@ -48,9 +48,6 @@ body[data-palette="blue"] {
 body[data-palette="red"] {
   --hue-color: 354;
 }
-body[data-palette="green"] {
-  --hue-color: 151;
-}
 /* Recalcula as cores conforme a paleta escolhida */
 body[data-palette] {
   --first-color:
@@ -62,6 +59,24 @@ body[data-palette] {
   --first-color-lighter:
   hsl(var(--hue-color), 92%, 85%);
   --button-label-color: #ffffff;
+}
+/* Paleta laranja */
+body[data-palette="orange"] {
+    --hue-color: 25;
+
+    --first-color: #c2410c;
+    --first-color-alt: #9a3412;
+    --first-color-second: #ea580c;
+    --first-color-lighter: #fed7aa;
+
+    --button-label-color: #ffffff;
+}
+
+/* Versão laranja para modo escuro */
+body.dark-theme[data-palette="orange"] {
+    --first-color: #fb923c;
+    --first-color-alt: #fdba74;
+    --button-label-color: #111827;
 }
 body[data-palette="black"] {
   --first-color: #323945;
@@ -317,8 +332,8 @@ h4 {
 .palette_swatch[data-color="red"] {
   background: #c95161;
 }
-.palette_swatch[data-color="green"] {
-  background: #329d72;
+.palette_swatch[data-color="orange"] {
+    background: #f97316;
 }
 .palette_swatch[aria-pressed="true"] {
   outline: 2px solid var(--title-color);
@@ -526,6 +541,16 @@ body:not(.dark-theme) .hero_monogram {
 }
 .button-white:hover {
   background: #edf0f5;
+}
+/* Botão WhatsApp acompanha a paleta ativa */
+.contato_actions .button-white {
+    background-color: var(--first-color);
+    color: var(--button-label-color);
+}
+
+.contato_actions .button-white:hover {
+    background-color: var(--first-color-alt);
+    color: var(--button-label-color);
 }
 .button-outline {
   background: transparent;
