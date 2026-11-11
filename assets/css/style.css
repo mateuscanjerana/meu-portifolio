@@ -1060,8 +1060,10 @@ body:not(.dark-theme) .hero_monogram {
   overflow: hidden;
 }
 .contato_title {
-  max-width: 430px;
-  font-size: clamp(1.4rem, 2.7vw, 2.15rem);
+  max-width: none;
+  font-size: clamp(1.65rem, 2.8vw, 2.4rem);
+  line-height: 1.25;
+  letter-spacing: -0.025em;
   margin-bottom: 0.9rem;
 }
 .contato_description {
@@ -1720,4 +1722,57 @@ body.reveal-ready .home_data {
 
 body.reveal-initializing .reveal-item {
   transition: none !important;
+}
+
+/* =========================================
+   V1.5 — CONTATO NO MOBILE
+   ========================================= */
+
+@media (max-width: 767px) {
+
+  /* Adiciona respiro nas laterais */
+  .contato.section {
+    padding-inline: 1rem;
+  }
+
+  /* Organiza o card em uma única coluna */
+  .contato_container {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+    padding: 1.75rem 1.35rem;
+  }
+
+  /* Oculta a assinatura visual somente no celular */
+  .contato_signature {
+    display: none;
+  }
+
+  /* Melhora a leitura e os espaçamentos */
+  .contato_description {
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+  }
+
+  .contato_actions {
+    gap: 0.75rem;
+  }
+}
+
+/* =========================================
+   CONTATO — AJUSTE RESPONSIVO
+   ========================================= */
+
+@media (min-width: 768px) {
+
+  /* Espaçamento externo do card */
+  .contato.section {
+    padding-inline: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  /* Limita a largura e centraliza */
+  .contato_container.container {
+    width: 100%;
+    max-width: 1080px;
+    margin-inline: auto;
+  }
 }
