@@ -501,10 +501,18 @@ h4 {
 .home_title span {
   display: block;
 }
+/* Subtítulo da Home — transição suave */
 .home_subtitle {
   color: var(--first-color);
   font-size: clamp(1.05rem, 1.8vw, 1.3rem);
   margin-bottom: 1.25rem;
+
+  transition: opacity 350ms ease;
+}
+
+/* Estado em que o texto desaparece */
+.home_subtitle.is-fading {
+  opacity: 0;
 }
 .home_description {
   max-width: 440px;

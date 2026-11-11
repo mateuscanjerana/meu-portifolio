@@ -234,3 +234,41 @@ function setMenu(open) {
   const year = document.getElementById("footer-year");
   if (year) year.textContent = new Date().getFullYear();
 })();
+
+  // =========================================
+  // V1.5 — ALTERNÂNCIA DO SUBTÍTULO DA HOME
+  // =========================================
+
+  const homeSubtitle = document.querySelector(".home_subtitle");
+
+  const homeTitles = [
+    "Desenvolvedor Web",
+    "Bacharel em Ciência da Computação"
+  ];
+
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)"
+  );
+
+  if (homeSubtitle) {
+    let titleIndex = 0;
+
+    setInterval(() => {
+      // Não anima com a aba oculta ou movimento reduzido.
+      if (document.hidden || reduceMotion.matches) return;
+
+      // Primeiro, faz o texto desaparecer.
+      homeSubtitle.classList.add("is-fading");
+
+      setTimeout(() => {
+        // Alterna para o próximo título.
+        titleIndex = (titleIndex + 1) % homeTitles.length;
+
+        homeSubtitle.textContent = homeTitles[titleIndex];
+
+        // Faz o novo texto reaparecer.
+        homeSubtitle.classList.remove("is-fading");
+      }, 350);
+
+    }, 4500);
+  }
