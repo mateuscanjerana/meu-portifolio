@@ -391,3 +391,75 @@ if (
 
   typingObserver.observe(codeEditor);
 }
+
+// =========================================
+// V1.5 — REVELAR ELEMENTOS AO ROLAR
+// =========================================
+
+
+const revealElements = document.querySelectorAll(
+  // Home
+  ".home_social, " +
+  ".home_img, " +
+  ".home_data, " +
+
+  // Demais seções
+  ".section_title, " +
+  ".section_subtitle, " +
+  ".about_visual, " +
+  ".about_data, " +
+  ".portifolio_container, " +
+  ".contato_container"
+);
+
+
+const revealReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+);
+
+if (!revealReducedMotion.matches && "IntersectionObserver" in window) {
+  // Prepara os elementos que receberão a animação.
+  revealElements.forEach((element) => {
+    element.classList.add("reveal-item");
+  });
+
+  // Observa quando os elementos entram na tela.
+
+  const revealObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Entrou na tela: aparece.
+          entry.target.classList.add("is-visible");
+        } else {
+          // Saiu da tela: prepara para aparecer novamente.
+          entry.target.classList.remove("is-visible");
+        }
+      });
+    },
+    {
+      threshold: 0.12,
+      rootMargin: "0px 0px -24px 0px",
+    },
+  );
+
+  
+  // Prepara os elementos antes da animação inicial.
+  document.body.classList.add(
+    "reveal-ready",
+    "reveal-initializing"
+  );
+
+  // Aguarda o navegador preparar o estado inicial.
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      document.body.classList.remove("reveal-initializing");
+
+      // Inicia a observação dos elementos.
+      revealElements.forEach((element) => {
+        revealObserver.observe(element);
+      });
+    });
+  });
+
+}

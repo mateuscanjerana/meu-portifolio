@@ -1667,3 +1667,57 @@ body:not(.dark-theme) .footer_bg {
     pointer-events: none;
   }
 }
+
+/* =========================================
+   V1.5 — ANIMAÇÕES DE ENTRADA
+   ========================================= */
+
+/* Ativado somente quando o JavaScript está preparado */
+body.reveal-ready .reveal-item {
+  transition:
+    opacity 650ms ease,
+    transform 650ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Estado inicial: discretamente oculto */
+body.reveal-ready .reveal-item:not(.is-visible) {
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+/* Estado final: posição normal */
+body.reveal-ready .reveal-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respeita usuários que preferem menos movimento */
+@media (prefers-reduced-motion: reduce) {
+  body.reveal-ready .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* =========================================
+   V1.5 — ENTRADA SEQUENCIAL DA HOME
+   ========================================= */
+
+body.reveal-ready .home_social {
+  transition-delay: 0ms;
+}
+
+body.reveal-ready .home_img {
+  transition-delay: 120ms;
+}
+
+body.reveal-ready .home_data {
+  transition-delay: 240ms;
+}
+
+/* V1.5 — Preparação da animação ao carregar a página */
+
+body.reveal-initializing .reveal-item {
+  transition: none !important;
+}
