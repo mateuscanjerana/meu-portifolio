@@ -158,7 +158,7 @@ function setMenu(open) {
   applyThemeMode();
 
   // Recupera a paleta de cores.
-  setPalette(safeRead("selected-palette") || "black");
+  setPalette(safeRead("selected-palette") || "orange");
 
   // Abre o menu de aparência.
   themeButton.addEventListener("click", () => {
