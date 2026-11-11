@@ -396,22 +396,19 @@ if (
 // V1.5 — REVELAR ELEMENTOS AO ROLAR
 // =========================================
 
-
 const revealElements = document.querySelectorAll(
   // Home
   ".home_social, " +
-  ".home_img, " +
-  ".home_data, " +
-
-  // Demais seções
-  ".section_title, " +
-  ".section_subtitle, " +
-  ".about_visual, " +
-  ".about_data, " +
-  ".portifolio_container, " +
-  ".contato_container"
+    ".home_img, " +
+    ".home_data, " +
+    // Demais seções
+    ".section_title, " +
+    ".section_subtitle, " +
+    ".about_visual, " +
+    ".about_data, " +
+    ".portifolio_container, " +
+    ".contato_container",
 );
-
 
 const revealReducedMotion = window.matchMedia(
   "(prefers-reduced-motion: reduce)",
@@ -443,12 +440,8 @@ if (!revealReducedMotion.matches && "IntersectionObserver" in window) {
     },
   );
 
-  
   // Prepara os elementos antes da animação inicial.
-  document.body.classList.add(
-    "reveal-ready",
-    "reveal-initializing"
-  );
+  document.body.classList.add("reveal-ready", "reveal-initializing");
 
   // Aguarda o navegador preparar o estado inicial.
   requestAnimationFrame(() => {
@@ -461,5 +454,4 @@ if (!revealReducedMotion.matches && "IntersectionObserver" in window) {
       });
     });
   });
-
 }
