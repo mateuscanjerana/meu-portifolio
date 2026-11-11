@@ -710,6 +710,38 @@ body:not(.dark-theme) .hero_monogram {
     monospace;
   white-space: nowrap;
 }
+
+/* V1.5 — Cursor de digitação no bloco de código */
+
+.editor_body p.is-typing::after {
+  content: "";
+  display: inline-block;
+
+  width: 2px;
+  height: 1em;
+  margin-left: 3px;
+
+  background: var(--first-color);
+  vertical-align: -0.15em;
+}
+
+/* Cursor pisca somente quando a digitação termina */
+.editor_body p.is-typing.is-complete::after {
+  animation: blink-cursor 1s steps(1) infinite;
+}
+
+@keyframes blink-cursor {
+  50% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .editor_body p.is-typing::after {
+    animation: none;
+  }
+}
+
 .code_line {
   display: inline-block;
   margin-right: 1.15rem;

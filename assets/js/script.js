@@ -11,21 +11,17 @@
   const footer = document.querySelector(".footer");
   const sections = [...document.querySelectorAll("main section[id]")];
 
-  
-function setMenu(open) {
-  navMenu.classList.toggle("show-menu", open);
-  document.body.classList.toggle("menu-open", open);
+  function setMenu(open) {
+    navMenu.classList.toggle("show-menu", open);
+    document.body.classList.toggle("menu-open", open);
 
-  navToggle.setAttribute(
-    "aria-expanded",
-    String(open)
-  );
+    navToggle.setAttribute("aria-expanded", String(open));
 
-  if (open) {
-    showPalette(false);
-    showThemeModeMenu(false);
+    if (open) {
+      showPalette(false);
+      showThemeModeMenu(false);
+    }
   }
-}
 
   navToggle?.addEventListener("click", () => setMenu(true));
   navClose?.addEventListener("click", () => setMenu(false));
@@ -235,40 +231,163 @@ function setMenu(open) {
   if (year) year.textContent = new Date().getFullYear();
 })();
 
-  // =========================================
-  // V1.5 — ALTERNÂNCIA DO SUBTÍTULO DA HOME
-  // =========================================
+// =========================================
+// V1.5 — ALTERNÂNCIA DO SUBTÍTULO DA HOME
+// =========================================
 
-  const homeSubtitle = document.querySelector(".home_subtitle");
+const homeSubtitle = document.querySelector(".home_subtitle");
 
-  const homeTitles = [
-    "Desenvolvedor Web",
-    "Bacharel em Ciência da Computação"
-  ];
+const homeTitles = [
+  "Desenvolvedor Web",
+  "Bacharel em Ciência da Computação",
+  "Criando soluções para problemas reais",
+];
 
-  const reduceMotion = window.matchMedia(
-    "(prefers-reduced-motion: reduce)"
+const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+if (homeSubtitle) {
+  let titleIndex = 0;
+
+  setInterval(() => {
+    // Não anima com a aba oculta ou movimento reduzido.
+    if (document.hidden || reduceMotion.matches) return;
+
+    // Primeiro, faz o texto desaparecer.
+    homeSubtitle.classList.add("is-fading");
+
+    setTimeout(() => {
+      // Alterna para o próximo título.
+      titleIndex = (titleIndex + 1) % homeTitles.length;
+
+      homeSubtitle.textContent = homeTitles[titleIndex];
+
+      // Faz o novo texto reaparecer.
+      homeSubtitle.classList.remove("is-fading");
+    }, 350);
+  }, 4500);
+}
+
+// =========================================
+// V1.5 — DIGITAÇÃO NATURAL DO BLOCO SOBRE MIM
+// =========================================
+
+const codeEditor = document.querySelector(".editor_body");
+
+const typingReducedMotion = window.matchMedia(
+  "(prefers-reduced-motion: reduce)",
+);
+
+if (
+  codeEditor &&
+  !typingReducedMotion.matches &&
+  "IntersectionObserver" in window
+) {
+  const typingParts = [];
+
+  // Guarda o texto original, preservando as cores do código.
+  codeEditor.querySelectorAll("p").forEach((line) => {
+    const walker = document.createTreeWalker(line, NodeFilter.SHOW_TEXT);
+
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+
+      // Não anima os números das linhas.
+      if (node.parentElement.closest(".code_line")) continue;
+
+      const originalText = node.nodeValue.replace(/\s+/g, " ");
+
+      if (!originalText.trim()) continue;
+
+      node.nodeValue = "";
+
+      typingParts.push({
+        node,
+        text: originalText,
+        line,
+      });
+    }
+  });
+
+  const typingObserver = new IntersectionObserver(
+    ([entry]) => {
+      if (!entry.isIntersecting) return;
+
+      typingObserver.disconnect();
+
+      let partIndex = 0;
+      let charIndex = 0;
+      let activeLine = null;
+
+      function typeNextChar() {
+        // Pausa quando a aba não está visível.
+        if (document.hidden) {
+          setTimeout(typeNextChar, 250);
+          return;
+        }
+
+        // Respeita a preferência por movimento reduzido.
+        if (typingReducedMotion.matches) {
+          typingParts.forEach((part) => {
+            part.node.nodeValue = part.text;
+          });
+
+          activeLine?.classList.remove("is-typing");
+          return;
+        }
+
+        const part = typingParts[partIndex];
+
+        // Terminou: mantém o cursor piscando na última linha.
+
+        // Terminou: ativa o piscar na última linha.
+        if (!part) {
+          activeLine?.classList.add("is-complete");
+          return;
+        }
+
+        // Move o cursor para a linha atual.
+        if (activeLine !== part.line) {
+          activeLine?.classList.remove("is-typing");
+
+          activeLine = part.line;
+          activeLine.classList.add("is-typing");
+        }
+
+        // Digita o próximo caractere.
+        const char = part.text[charIndex];
+
+        part.node.nodeValue += char;
+        charIndex++;
+
+        // Varia a velocidade para simular digitação humana.
+        let delay = 80 + Math.random() * 65;
+
+        // Pequena pausa após pontuação.
+        if (/[.,;:!?]/.test(char)) {
+          delay += 180;
+        }
+
+        // Passa para o próximo trecho.
+        if (charIndex >= part.text.length) {
+          partIndex++;
+          charIndex = 0;
+
+          // Pausa ao mudar de linha.
+          const nextPart = typingParts[partIndex];
+
+          if (nextPart && nextPart.line !== part.line) {
+            delay += 280;
+          }
+        }
+
+        // Agenda o próximo caractere.
+        setTimeout(typeNextChar, delay);
+      }
+
+      typeNextChar();
+    },
+    { threshold: 0.2 },
   );
 
-  if (homeSubtitle) {
-    let titleIndex = 0;
-
-    setInterval(() => {
-      // Não anima com a aba oculta ou movimento reduzido.
-      if (document.hidden || reduceMotion.matches) return;
-
-      // Primeiro, faz o texto desaparecer.
-      homeSubtitle.classList.add("is-fading");
-
-      setTimeout(() => {
-        // Alterna para o próximo título.
-        titleIndex = (titleIndex + 1) % homeTitles.length;
-
-        homeSubtitle.textContent = homeTitles[titleIndex];
-
-        // Faz o novo texto reaparecer.
-        homeSubtitle.classList.remove("is-fading");
-      }, 350);
-
-    }, 4500);
-  }
+  typingObserver.observe(codeEditor);
+}
